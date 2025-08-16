@@ -17,22 +17,12 @@
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <!-- creoaks scss -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      .mil-logo img.logo-black { display: none; }
-      body.logo-black .mil-logo img.logo-white { display: none; }
-      body.logo-black .mil-logo img.logo-black { display: inline; }
-      /* Mobile: always white */
-      @media (max-width: 991.98px) {
-        .mil-logo img.logo-white { display: inline !important; }
-        .mil-logo img.logo-black { display: none !important; }
-      }
-    </style>
     <!-- page name -->
     <title>Creoaks</title>
 
 </head>
 
-<body>
+<body class="header-light">
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
@@ -53,9 +43,9 @@
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
-                    <p class="mil-h3 mil-muted">Creative</p>
-                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+                    <p class="mil-h3 mil-muted mil-thin">Getting</p>
+                    <p class="mil-h3 mil-muted">Your Brand</p>
+                    <p class="mil-h3 mil-muted mil-thin">Noticed</p>
                 </div>
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
@@ -78,8 +68,8 @@
             <!-- frame clone -->
             <div class="mil-frame-top">
                 <a href="index.html" class="mil-logo">
-                    <img src="img/logos/2.png" alt="creoaks logo" class="logo-white" style="max-height: 50px; height: auto; vertical-align: middle;" />
-                    <img src="img/logos/3.png" alt="creoaks logo" class="logo-black" style="max-height: 50px; height: auto; vertical-align: middle;" />
+                    <img src="img/logos/2.png" alt="creoaks logo" class="logo--light" />
+                    <img src="img/logos/3.png" alt="creoaks logo" class="logo--dark" />
                 </a>
                 <div class="mil-menu-btn">
                     <span></span>
@@ -155,8 +145,8 @@
         <div class="mil-frame">
             <div class="mil-frame-top">
                 <a href="index.html" class="mil-logo">
-                    <img src="img/logos/2.png" alt="creoaks logo" class="logo-white" style="max-height: 50px; height: auto; vertical-align: middle;" />
-                    <img src="img/logos/3.png" alt="creoaks logo" class="logo-black" style="max-height: 50px; height: auto; vertical-align: middle;" />
+                    <img src="img/logos/2.png" alt="creoaks logo" class="logo--light" />
+                    <img src="img/logos/3.png" alt="creoaks logo" class="logo--dark" />
                 </a>
                 <div class="mil-menu-btn">
                     <span></span>
@@ -178,7 +168,7 @@
             <div id="swupMain" class="mil-main-transition">
 
                 <!-- banner -->
-                <section class="mil-banner mil-dark-bg">
+                <section id="hero" class="mil-banner mil-dark-bg">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
@@ -688,38 +678,6 @@
     <!-- creoaks js -->
     <script src="js/main.js"></script>
 
-<script>
-(function() {
-  // Desktop only: on mobile we force white via CSS
-  if (window.matchMedia('(max-width: 991.98px)').matches) {
-    document.body.classList.remove('logo-black');
-    return;
-  }
-  var map = {
-    about: 'black',           // Discover Our Studio
-    'unique-ideas': 'white',  // Unique Ideas
-    team: 'black',            // Meet our Creative Director
-    reviews: 'black'          // Customer Voices
-  };
-  var ids = Object.keys(map);
-  var sections = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
-  // Initial state: white
-  document.body.classList.remove('logo-black');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) {
-        var mode = map[e.target.id];
-        if (mode === 'black') {
-          document.body.classList.add('logo-black');
-        } else {
-          document.body.classList.remove('logo-black');
-        }
-      }
-    });
-  }, { root: null, threshold: 0.6 });
-  sections.forEach(function(sec){ io.observe(sec); });
-})();
-</script>
 
 </body>
 

@@ -1,3 +1,27 @@
+/* ================= Header color scheme (logo + hamburger) ================= */
+/* Default to showing the light logo to avoid flashes before JS sets a class */
+.mil-frame-top .mil-logo img.logo--dark { display: none; }
+
+/* When the body has header-light: show white logo + white hamburger */
+body.header-light .mil-frame-top .mil-logo img.logo--light { display: inline; }
+body.header-light .mil-frame-top .mil-logo img.logo--dark  { display: none; }
+body.header-light .mil-menu-btn span,
+body.header-light .mil-menu-btn span:before,
+body.header-light .mil-menu-btn span:after { background: #ffffff !important; }
+
+/* When the body has header-dark: show black logo + black hamburger */
+body.header-dark .mil-frame-top .mil-logo img.logo--light { display: none; }
+body.header-dark .mil-frame-top .mil-logo img.logo--dark  { display: inline; }
+body.header-dark .mil-menu-btn span,
+body.header-dark .mil-menu-btn span:before,
+body.header-dark .mil-menu-btn span:after { background: #000000 !important; }
+
+/* Consistent logo sizing and alignment */
+.mil-frame-top .mil-logo img { max-height: 56px; height: auto; width: auto; vertical-align: middle; }
+@media (max-width: 991.98px) {
+  .mil-frame-top .mil-logo img { max-height: 48px; }
+}
+/* ======================================================================== */
 /* -------------------------------------------
 
 Name: 		Ruizarch
@@ -4282,3 +4306,10 @@ body.logo-black .mil-logo img.logo-black { display: inline-block; }
   .mil-frame { z-index: 1000 !important; }
 }
 /* ===================================================== */
+
+/* === Ensure the hero line-break works on mobile === */
+@media (max-width: 767.98px) {
+  .mil-banner h1 br { display: inline !important; }
+  .mil-banner h1 { white-space: normal !important; }
+}
+/* === End mobile hero break fix === */

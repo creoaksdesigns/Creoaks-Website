@@ -599,59 +599,73 @@ $(function () {
 
     /***************************
 
-    logo switcher (desktop)
+    header color switcher (desktop)
 
     ***************************/
-    function initLogoSwitcher() {
-        // Mobile: force white logo via CSS and stop observing
+    function initHeaderColorSwitcher() {
+        // Mobile: header stays light via CSS; clear any previous observer
         if (window.matchMedia('(max-width: 991.98px)').matches) {
-            document.body.classList.remove('logo-black');
-            if (window.__logoIO && window.__logoIO.disconnect) {
-                try { window.__logoIO.disconnect(); } catch (e) {}
+            document.body.classList.remove('header-dark');
+            document.body.classList.add('header-light');
+            if (window.__headerIO && window.__headerIO.disconnect) {
+                try { window.__headerIO.disconnect(); } catch (e) {}
             }
             return;
         }
 
+        // Map sections to desired header theme over them
+        // Ensure these IDs exist in your HTML
         var map = {
-            about: 'black',           // Discover Our Studio
-            'unique-ideas': 'white',  // Unique Ideas
-            team: 'black',            // Meet our Creative Director
-            reviews: 'black'          // Customer Voices
+            hero: 'light',          // top banner/hero
+            about: 'dark',          // Discover Our Studio
+            'unique-ideas': 'light',// Unique Ideas
+            team: 'dark',           // Meet our Creative Director
+            reviews: 'dark'         // Customer Voices
         };
 
         // Clean up any previous observer
-        if (window.__logoIO && window.__logoIO.disconnect) {
-            try { window.__logoIO.disconnect(); } catch (e) {}
+        if (window.__headerIO && window.__headerIO.disconnect) {
+            try { window.__headerIO.disconnect(); } catch (e) {}
         }
 
-        var io = new IntersectionObserver(function(entries) {
-            entries.forEach(function(e) {
-                if (e.isIntersecting) {
-                    var mode = map[e.target.id];
-                    if (mode === 'black') {
-                        document.body.classList.add('logo-black');
-                    } else {
-                        document.body.classList.remove('logo-black');
-                    }
-                }
-            });
-        }, { root: null, threshold: 0.6 });
+        var current = null;
+        var io = new IntersectionObserver(function(entries){
+            // choose the entry with largest intersectionRatio
+            var best = entries.reduce(function(a,b){
+                return (a && a.intersectionRatio || 0) > (b.intersectionRatio || 0) ? a : b;
+            }, null);
+            if (!best || !best.isIntersecting) return;
 
-        // Observe mapped sections if present
-        Object.keys(map).forEach(function(id) {
+            var want = map[best.target.id]; // 'light' or 'dark'
+            if (!want) return;
+
+            if (want !== current) {
+                document.body.classList.toggle('header-dark',  want === 'dark');
+                document.body.classList.toggle('header-light', want === 'light');
+                current = want;
+            }
+        }, {
+            threshold: [0.15, 0.35, 0.6],
+            rootMargin: '-10% 0px -60%'
+        });
+
+        // Observe all mapped sections that exist on the page
+        Object.keys(map).forEach(function(id){
             var el = document.getElementById(id);
             if (el) io.observe(el);
         });
 
-        // Default to white on load
-        document.body.classList.remove('logo-black');
+        // Default state on load
+        if (!document.body.classList.contains('header-dark') && !document.body.classList.contains('header-light')) {
+            document.body.classList.add('header-light');
+        }
 
-        // keep on window for cleanup in re-inits
-        window.__logoIO = io;
+        // keep reference for cleanup on re-inits
+        window.__headerIO = io;
     }
 
     // Run on initial load
-    initLogoSwitcher();
+    initHeaderColorSwitcher();
 
     /*----------------------------------------------------------
     ------------------------------------------------------------
@@ -1094,8 +1108,8 @@ $(function () {
             },
         });
 
-        // re-init logo switching after swup content replacement
-        initLogoSwitcher();
+        // re-init header color switching after swup content replacement
+        initHeaderColorSwitcher();
 
     });
 
