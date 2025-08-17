@@ -25,7 +25,7 @@ body.header-dark .mil-menu-btn span:after { background: #000000 !important; }
 @media (min-width: 992px) {
   /* Target the fixed page header, not the full-screen menu header */
   .mil-frame .mil-frame-top .mil-logo img {
-    margin-left: -45px; /* tweak between -20px and -40px to taste */
+    margin-left: -60px; /* tweak between -40px and -60px to taste */
   }
 }
 /* ======================================================================== */
