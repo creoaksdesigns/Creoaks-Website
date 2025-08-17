@@ -21,6 +21,13 @@ body.header-dark .mil-menu-btn span:after { background: #000000 !important; }
 @media (max-width: 991.98px) {
   .mil-frame-top .mil-logo img { max-height: 48px; }
 }
+/* Desktop-only: nudge header logo left to avoid overlapping content */
+@media (min-width: 992px) {
+  /* Target the fixed page header, not the full-screen menu header */
+  .mil-frame .mil-frame-top .mil-logo img {
+    margin-left: -45px; /* tweak between -20px and -40px to taste */
+  }
+}
 /* ======================================================================== */
 /* -------------------------------------------
 
