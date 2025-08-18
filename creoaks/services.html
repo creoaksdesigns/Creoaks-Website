@@ -26,6 +26,9 @@
     <!-- creoaks scss -->
     <link rel="stylesheet" href="css/style.css">
     <style>
+      .mil-step { font-weight: 600; margin-right: 0.5rem; }
+    </style>
+    <style>
       /* Make manual line breaks in headings work on mobile, too */
       @media (max-width: 991.98px) {
         h1 br, h2 br, h3 br, h4 br { display: inline !important; }
@@ -172,8 +175,10 @@
                         <div class="row justify-content-between">
                             <div class="col-lg-4 mil-relative mil-mb-90">
 
-                                <h4 class="mil-up mil-mb-30">Creoaks <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span></h4>
-                                <p class="mil-up mil-mb-30">we guide businesses like yours from uncertainty to clarity, through design and print solutions that communicate, captivate, and convert.</p>
+                                <h4 class="mil-up mil-mb-30">Our <span class="mil-thin">Approach</span><br>and <span class="mil-thin">Work Specifics</span></h4>
+                                <p class="mil-up mil-mb-30">You want your brand to get noticed. <br>
+                                    Sometimes that means deploying marketing campaigns. Other times, it’s getting the right brand designs or print materials—fast and stress-free.<br>
+                                    At Creoaks, we guide you through a clear, proven process to get results:</p>
                                 <div class="mil-up">
                                     <a href="portfolio-2.html" class="mil-link mil-dark mil-arrow-place">
                                         <span>View works</span>
@@ -183,90 +188,87 @@
                             </div>
                             <div class="col-lg-6">
 
-                                <div class="mil-accordion-group mil-up">
-                                    <div class="mil-accordion-menu">
-
-                                        <p class="mil-accordion-head">Share your vision</p>
-
-                                        <div class="mil-symbol mil-h3">
-                                            <div class="mil-plus">+</div>
-                                            <div class="mil-minus">-</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">Tell us what you want to do and how you want to be seen.</p>
-
-                                        <p class="mil-mb-30">We communicate our understanding of your vision.</p>
-
-                                        <p class="mil-mb-30">You confirm we are on the same page.</p>
-                                    </div>
+                              <div class="mil-accordion-group mil-up">
+                                <div class="mil-accordion-menu">
+                                  <button class="mil-accordion-head" aria-expanded="true" aria-controls="step1" id="step1-btn">
+                                    <span class="mil-step">1.</span> Share Your Vision
+                                  </button>
+                                  <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                  </div>
                                 </div>
-
-                                <div class="mil-accordion-group mil-up">
-                                    <div class="mil-accordion-menu">
-
-                                        <p class="mil-accordion-head">Get unique concepts</p>
-
-                                        <div class="mil-symbol mil-h3">
-                                            <div class="mil-plus">+</div>
-                                            <div class="mil-minus">-</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">We brainstorm unique concepts for just you.</p>
-                                        <p class="mil-mb-30">We present them to you to choose your preference.</p>
-                                    </div>
+                                <div class="mil-accordion-content" id="step1" role="region" aria-labelledby="step1-btn">
+                                  <p class="mil-mb-30">Tell us what you want to achieve and how you want to be seen.</p>
+                                  <p class="mil-mb-30">We restate your brief so we’re perfectly aligned.</p>
                                 </div>
+                              </div>
 
-                                <div class="mil-accordion-group mil-up">
-                                    <div class="mil-accordion-menu">
-
-                                        <p class="mil-accordion-head">Choose & refine concept</p>
-
-                                        <div class="mil-symbol mil-h3">
-                                            <div class="mil-plus">+</div>
-                                            <div class="mil-minus">-</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mil-accordion-content">
-                                        <p class="mil-mb-30"> You choose a concept you like and we refine it to your taste. If you don't like presented concepts, new ones are shown.</p>
-                                    </div>
+                              <div class="mil-accordion-group mil-up">
+                                <div class="mil-accordion-menu">
+                                  <button class="mil-accordion-head" aria-expanded="false" aria-controls="step2" id="step2-btn">
+                                    <span class="mil-step">2.</span> Get Custom Concepts
+                                  </button>
+                                  <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                  </div>
                                 </div>
-
-                                <div class="mil-accordion-group mil-up">
-                                    <div class="mil-accordion-menu">
-
-                                        <p class="mil-accordion-head">We implement your choice</p>
-
-                                        <div class="mil-symbol mil-h3">
-                                            <div class="mil-plus">+</div>
-                                            <div class="mil-minus">-</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">This is the part we create the design for all formats, in the case of printing, we print your choice based on agreement.</p>
-                                    </div>
+                                <div class="mil-accordion-content" id="step2" role="region" aria-labelledby="step2-btn">
+                                  <p class="mil-mb-30">We develop unique concepts for your brand and present clear options.</p>
                                 </div>
+                              </div>
 
-                                <div class="mil-accordion-group mil-up">
-                                    <div class="mil-accordion-menu">
-
-                                        <p class="mil-accordion-head">We deliver </p>
-
-                                        <div class="mil-symbol mil-h3">
-                                            <div class="mil-plus">+</div>
-                                            <div class="mil-minus">-</div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">We deliver the finished work.</p>
-                                    </div>
+                              <div class="mil-accordion-group mil-up">
+                                <div class="mil-accordion-menu">
+                                  <button class="mil-accordion-head" aria-expanded="false" aria-controls="step3" id="step3-btn">
+                                    <span class="mil-step">3.</span> Choose &amp; Refine
+                                  </button>
+                                  <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                  </div>
                                 </div>
+                                <div class="mil-accordion-content" id="step3" role="region" aria-labelledby="step3-btn">
+                                  <p class="mil-mb-30">Pick your favorite concept. We refine it with your feedback until it’s right.</p>
+                                </div>
+                              </div>
+
+                              <div class="mil-accordion-group mil-up">
+                                <div class="mil-accordion-menu">
+                                  <button class="mil-accordion-head" aria-expanded="false" aria-controls="step4" id="step4-btn">
+                                    <span class="mil-step">4.</span> We Implement
+                                  </button>
+                                  <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                  </div>
+                                </div>
+                                <div class="mil-accordion-content" id="step4" role="region" aria-labelledby="step4-btn">
+                                  <p class="mil-mb-30">We design final assets for every format. If printing, we handle production to spec.</p>
+                                </div>
+                              </div>
+
+                              <div class="mil-accordion-group mil-up">
+                                <div class="mil-accordion-menu">
+                                  <button class="mil-accordion-head" aria-expanded="false" aria-controls="step5" id="step5-btn">
+                                    <span class="mil-step">5.</span> Deliver &amp; Support
+                                  </button>
+                                  <div class="mil-symbol mil-h3">
+                                    <div class="mil-plus">+</div>
+                                    <div class="mil-minus">-</div>
+                                  </div>
+                                </div>
+                                <div class="mil-accordion-content" id="step5" role="region" aria-labelledby="step5-btn">
+                                  <p class="mil-mb-30">We deliver on time and stay available for updates or reprints as needed.</p>
+                                </div>
+                              </div>
+
+                              <div class="mil-up" style="margin-top: 20px;">
+                                <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20want%20to%20discuss%20a%20new%20project." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
+                                  <span>Let’s Start Your Project</span>
+                                </a>
+                              </div>
 
                             </div>
                         </div>
@@ -291,12 +293,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Graphics <br> Design</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Professional, custom visuals that connect, convert, and grow your brand. From concepts to launch, we bring your vision to life beautifully.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">UX Audits</li>
-                                        <li class="mil-up">Design thinking</li>
-                                        <li class="mil-up">Methodologies</li>
-                                        <li class="mil-up">Wireframing</li>
+                                      <li class="mil-up">Logos & Brand Identity</li>
+                                      <li class="mil-up">Brochures, Flyers & Posters</li>
+                                      <li class="mil-up">Social Media Graphics</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Graphics%20Design%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
@@ -308,12 +309,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Digital <br>Printing</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Quick, vibrant, high‑quality prints for small projects. Perfect when you need sharp results — fast and cost‑effective.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">UX Audits</li>
-                                        <li class="mil-up">Design thinking</li>
-                                        <li class="mil-up">Methodologies</li>
-                                        <li class="mil-up">Wireframing</li>
+                                      <li class="mil-up">Business Cards</li>
+                                      <li class="mil-up">Invitations</li>
+                                      <li class="mil-up">Custom Leaflets</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Digital%20Printing%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
@@ -325,12 +325,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Offset <br>Printing</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Our creative agency is a team of professionals focused on helping your brand grow.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Premium quality for large‑volume jobs. Consistent, professional results ideal for campaigns and corporate materials.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">UX Audits</li>
-                                        <li class="mil-up">Design thinking</li>
-                                        <li class="mil-up">Methodologies</li>
-                                        <li class="mil-up">Wireframing</li>
+                                      <li class="mil-up">Magazines</li>
+                                      <li class="mil-up">Corporate Brochures</li>
+                                      <li class="mil-up">Reports</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Offset%20Printing%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
@@ -343,11 +342,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Large Format <br>Printing</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Fast, vibrant, high‑quality prints for small projects and quick turnarounds.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Bold, durable prints designed to grab attention. Make your message impossible to ignore, indoors or outdoors.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">Business Cards</li>
-                                        <li class="mil-up">Invitations</li>
-                                        <li class="mil-up">Custom Leaflets</li>
+                                      <li class="mil-up">Event Banners</li>
+                                      <li class="mil-up">Posters & Signage</li>
+                                      <li class="mil-up">Wall & Window Graphics</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Large%20Format%20Printing%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
@@ -360,11 +359,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Custom Packaging<br>and Labels</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Premium, consistent quality for large‑volume print runs and campaigns.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Eye‑catching boxes, stickers, and labels that make your products retail‑ready and unforgettable.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">Magazines</li>
-                                        <li class="mil-up">Corporate Brochures</li>
-                                        <li class="mil-up">Annual Reports</li>
+                                      <li class="mil-up">Eco‑friendly Options</li>
+                                      <li class="mil-up">Brand‑Consistent Designs</li>
+                                      <li class="mil-up">Retail‑Ready Packaging</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Custom%20Packaging%20and%20Labels%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
@@ -377,11 +376,11 @@
 
                                 <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
                                     <h4 class="mil-up mil-mb-30">Branding<br>Consultation</h4>
-                                    <p class="mil-descr mil-up mil-mb-30">Bold, durable visuals that demand attention indoors and outdoors.</p>
+                                    <p class="mil-descr mil-up mil-mb-30">Build a consistent, memorable brand that resonates. We’ll help clarify your message, visuals, and strategy.</p>
                                     <ul class="mil-service-list mil-dark mil-mb-30">
-                                        <li class="mil-up">Event Banners</li>
-                                        <li class="mil-up">Posters & Signage</li>
-                                        <li class="mil-up">Wall & Window Graphics</li>
+                                      <li class="mil-up">Clear Brand Messaging</li>
+                                      <li class="mil-up">Visual Identity Development</li>
+                                      <li class="mil-up">Strategic Brand Planning</li>
                                     </ul>
                                     <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Branding%20Consultation%20service." target="_blank" rel="noopener noreferrer nofollow" class="mil-link mil-dark mil-arrow-place mil-up" data-no-swup onclick="window.open(this.href,'_blank','noopener'); return false;">
                                         <span>Explore This Service</span>
