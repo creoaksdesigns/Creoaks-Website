@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="css/plugins/swiper.min.css">
     <!-- fancybox css -->
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <style>
+      /* Desktop hamburger should be black */
+      @media (min-width: 992px) {
+        .mil-frame-top .mil-menu-btn span,
+        .mil-frame-top .mil-menu-btn span:before,
+        .mil-frame-top .mil-menu-btn span:after { background: #000; }
+      }
+    </style>
     <!-- creoaks scss -->
     <link rel="stylesheet" href="css/style.css">
     <!-- page name -->
@@ -65,16 +73,7 @@
 
         <!-- menu -->
         <div class="mil-menu-frame">
-            <!-- frame clone -->
-            <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo">
-                    <img src="img/logos/2.png" alt="creoaks logo" style="max-height: 50px; height: auto; vertical-align: middle;" />
-                </a>
-                <div class="mil-menu-btn">
-                    <span></span>
-                </div>
-            </div>
-            <!-- frame clone end -->
+
             <div class="container">
                 <div class="mil-menu-content">
                     <div class="row">
@@ -97,36 +96,7 @@
                                         <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
                                     </div>
                                 </div>
-                                <div class="mil-menu-right">
-                                    <div class="row">
-                                        <div class="col-lg-8 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30"><a href="portfolio-2.html" class="mil-light-soft">Portfolio</a></h6>
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
 
-                                            <h6 class="mil-muted mil-mb-30">Useful links</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="mil-divider mil-mb-60"></div>
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Address</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
@@ -144,7 +114,12 @@
         <div class="mil-frame">
             <div class="mil-frame-top">
                 <a href="index.html" class="mil-logo">
+                  <picture>
+                    <!-- Desktop (>=992px): black logo -->
+                    <source media="(min-width: 992px)" srcset="img/logos/3.png">
+                    <!-- Default/mobile: white logo -->
                     <img src="img/logos/2.png" alt="creoaks logo" style="max-height: 50px; height: auto; vertical-align: middle;" />
+                  </picture>
                 </a>
                 <div class="mil-menu-btn">
                     <span></span>
@@ -175,25 +150,24 @@
                             <ul class="mil-breadcrumbs mil-mb-60">
                                 <li><a href="index.html">Homepage</a></li>
                                 <li><a href="services.html">Services</a></li>
-                                <li><a href="service.html">Service</a></li>
                             </ul>
-                            <h1 class="mil-mb-60">Website <span class="mil-thin">Design</span><br> and <span class="mil-thin">Development</span></h1>
+                            <h1 class="mil-mb-60">Brand <span class="mil-thin">Design</span><br> and <span class="mil-thin">Printing</span></h1>
                             <a href="#service" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-                                <span>About service</span>
+                                <span>About services</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- banner end -->
 
-                <!-- service -->
+                <!-- our approach -->
                 <section id="service">
                     <div class="container mil-p-120-90">
                         <div class="row justify-content-between">
                             <div class="col-lg-4 mil-relative mil-mb-90">
 
-                                <h4 class="mil-up mil-mb-30">Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span></h4>
-                                <p class="mil-up mil-mb-30">At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.</p>
+                                <h4 class="mil-up mil-mb-30">Creoaks <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span></h4>
+                                <p class="mil-up mil-mb-30">we guide businesses like yours from uncertainty to clarity, through design and print solutions that communicate, captivate, and convert.</p>
                                 <div class="mil-up">
                                     <a href="portfolio-2.html" class="mil-link mil-dark mil-arrow-place">
                                         <span>View works</span>
@@ -206,7 +180,7 @@
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
 
-                                        <p class="mil-accordion-head">UX Audits</p>
+                                        <p class="mil-accordion-head">Share your vision</p>
 
                                         <div class="mil-symbol mil-h3">
                                             <div class="mil-plus">+</div>
@@ -215,20 +189,18 @@
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the website's design, functionality, and content to identify areas of improvement that can enhance the user's overall experience.</p>
+                                        <p class="mil-mb-30">Tell us what you want to do and how you want to be seen.</p>
 
-                                        <p class="mil-mb-30">During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the website's usability, accessibility, and overall user experience.</p>
+                                        <p class="mil-mb-30">We communicate our understanding of your vision.</p>
 
-                                        <p class="mil-mb-30">The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness. The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.</p>
-
-                                        <p class="mil-mb-30">In summary, a UX audit can help website owners identify areas of improvement that can enhance their website's user experience and increase user engagement and satisfaction.</p>
+                                        <p class="mil-mb-30">You confirm we are on the same page.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
 
-                                        <p class="mil-accordion-head">Design thinking</p>
+                                        <p class="mil-accordion-head">Get unique concepts</p>
 
                                         <div class="mil-symbol mil-h3">
                                             <div class="mil-plus">+</div>
@@ -237,15 +209,15 @@
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback.</p>
-                                        <p class="mil-mb-30">Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.</p>
+                                        <p class="mil-mb-30">We brainstorm unique concepts for just you.</p>
+                                        <p class="mil-mb-30">We present them to you to choose your preference.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
 
-                                        <p class="mil-accordion-head">wireframing</p>
+                                        <p class="mil-accordion-head">Choose & refine concept</p>
 
                                         <div class="mil-symbol mil-h3">
                                             <div class="mil-plus">+</div>
@@ -254,14 +226,14 @@
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">Wireframing is a vital step in web design where a visual representation of a website's structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the website's architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development.</p>
+                                        <p class="mil-mb-30"> You choose a concept you like and we refine it to your taste. If you don't like presented concepts, new ones are shown.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
 
-                                        <p class="mil-accordion-head">Aesthetics</p>
+                                        <p class="mil-accordion-head">We implement your choice</p>
 
                                         <div class="mil-symbol mil-h3">
                                             <div class="mil-plus">+</div>
@@ -270,14 +242,14 @@
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">Aesthetics in web design focus on the visual appeal of a website, incorporating elements like colors, typography, images, and layout. It aims to create an engaging and visually pleasing user experience that reflects the brand identity and purpose of the website. A well-designed aesthetic balances visual appeal with functionality, leaving a lasting impression on users.</p>
+                                        <p class="mil-mb-30">This is the part we create the design for all formats, in the case of printing, we print your choice based on agreement.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
 
-                                        <p class="mil-accordion-head">Methodologies</p>
+                                        <p class="mil-accordion-head">We deliver </p>
 
                                         <div class="mil-symbol mil-h3">
                                             <div class="mil-plus">+</div>
@@ -286,7 +258,7 @@
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-mb-30">Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae.</p>
+                                        <p class="mil-mb-30">We deliver the finished work.</p>
                                     </div>
                                 </div>
 
@@ -294,114 +266,18 @@
                         </div>
                     </div>
                 </section>
-                <!-- service end -->
+                <!-- our approach end -->
 
-                <!-- prices -->
-                <section class="mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="container mil-p-120-120">
-                            <div class="mil-center">
-                                <h2 class="mil-muted mil-up mil-mb-30">Reasonable <span class="mil-thin">prices</span> <br>for innovative <span class="mil-thin">solutions</span></h2>
-                                <p class="mil-light-soft mil-up mil-mb-120">At our agency, we have a unique approach to web design and development. <br>We believe in creating in terms of user experience, functionality.</p>
-                            </div>
 
-                            <a href="contact.html" class="mil-price-card mil-choose mil-accent-cursor mil-up">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-2">
-                                        <div class="mil-price-number mil-mb-30"><span class="mil-muted mil-thin">$</span><span class="mil-accent">19</span></div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h5 class="mil-muted mil-mb-30">Tailored Designs for<br> Every Budget</h5>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <p class="mil-light-soft mil-mb-30">Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</p>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="mil-adaptive-right mil-mb-30">
-                                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="contact.html" class="mil-price-card mil-choose mil-accent-cursor mil-up">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-2">
-                                        <div class="mil-price-number mil-mb-30"><span class="mil-muted mil-thin">$</span><span class="mil-accent">29</span></div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h5 class="mil-muted mil-mb-30">Inspiring and Customized <br> Design Solutions</h5>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <p class="mil-light-soft mil-mb-30">Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</p>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="mil-adaptive-right mil-mb-30">
-                                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="contact.html" class="mil-price-card mil-choose mil-accent-cursor mil-up">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-2">
-                                        <div class="mil-price-number mil-mb-30"><span class="mil-muted mil-thin">$</span><span class="mil-accent">49</span></div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h5 class="mil-muted mil-mb-30">Unleashing the Beauty of Space <br> with Unique Designs</h5>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <p class="mil-light-soft mil-mb-30">Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</p>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="mil-adaptive-right mil-mb-30">
-                                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="contact.html" class="mil-price-card mil-choose mil-accent-cursor mil-up mil-mb-60">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-2">
-                                        <div class="mil-price-number mil-mb-30"><span class="mil-muted mil-thin">$</span><span class="mil-accent">199</span></div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h5 class="mil-muted mil-mb-30">Exquisite Design Concepts <br> for Discerning Clients</h5>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <p class="mil-light-soft mil-mb-30">Tomlo commodi, mollitia atque betae esse itaque a, voluptatibus, suscipit beatae officiis omnis.</p>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="mil-adaptive-right mil-mb-30">
-                                            <div class="mil-button mil-icon-button-sm mil-arrow-place"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div class="mil-center">
-                                <a href="contact.html" class="mil-button  mil-arrow-place">
-                                    <span>individual solution</span>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-                <!-- prices end -->
-
-                <!-- other services -->
-                <section>
+                <!-- services -->
+                <section id="services">
                     <div class="container mil-p-120-90">
                         <div class="row align-items-center mil-mb-30">
                             <div class="col-lg-6 mil-mb-30">
-                                <h3 class="mil-up">Other services</h3>
+                                <h3 class="mil-up">Our services</h3>
                             </div>
                             <div class="col-lg-6 mil-mb-30">
-                                <div class="mil-adaptive-right mil-up">
-                                    <a href="services.html" class="mil-link mil-dark mil-arrow-place">
-                                        <span>View all</span>
-                                    </a>
-                                </div>
+                                <div class="mil-adaptive-right mil-up"></div>
                             </div>
                         </div>
                         <div class="row">
@@ -456,10 +332,62 @@
                                 </div>
 
                             </div>
+
+                            <div class="col-lg-4">
+
+                                <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
+                                    <h4 class="mil-up mil-mb-30">Digital <br>Printing</h4>
+                                    <p class="mil-descr mil-up mil-mb-30">Fast, vibrant, high‑quality prints for small projects and quick turnarounds.</p>
+                                    <ul class="mil-service-list mil-dark mil-mb-30">
+                                        <li class="mil-up">Business Cards</li>
+                                        <li class="mil-up">Invitations</li>
+                                        <li class="mil-up">Custom Leaflets</li>
+                                    </ul>
+                                    <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Digital%20Printing%20service." target="_blank" rel="noopener" class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <span>Read more</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
+                                    <h4 class="mil-up mil-mb-30">Offset <br>Printing</h4>
+                                    <p class="mil-descr mil-up mil-mb-30">Premium, consistent quality for large‑volume print runs and campaigns.</p>
+                                    <ul class="mil-service-list mil-dark mil-mb-30">
+                                        <li class="mil-up">Magazines</li>
+                                        <li class="mil-up">Corporate Brochures</li>
+                                        <li class="mil-up">Annual Reports</li>
+                                    </ul>
+                                    <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Offset%20Printing%20service." target="_blank" rel="noopener" class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <span>Read more</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <div class="mil-service-card-lg mil-other-card mil-more mil-mb-30">
+                                    <h4 class="mil-up mil-mb-30">Large Format <br>Printing</h4>
+                                    <p class="mil-descr mil-up mil-mb-30">Bold, durable visuals that demand attention indoors and outdoors.</p>
+                                    <ul class="mil-service-list mil-dark mil-mb-30">
+                                        <li class="mil-up">Event Banners</li>
+                                        <li class="mil-up">Posters & Signage</li>
+                                        <li class="mil-up">Wall & Window Graphics</li>
+                                    </ul>
+                                    <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20need%20more%20info%20on%20your%20Large%20Format%20Printing%20service." target="_blank" rel="noopener" class="mil-link mil-dark mil-arrow-place mil-up">
+                                        <span>Read more</span>
+                                    </a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </section>
-                <!-- other services end -->
+                <!-- services end -->
+
 
                 <!-- footer -->
                 <footer class="mil-dark-bg">
@@ -472,12 +400,13 @@
                                         <img src="img/logos/1.png" alt="creoaks logo" style="max-height: 50px; height: auto; vertical-align: middle;" />
                                     </div>
 
-                                    <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
+                                    <p class="mil-light-soft mil-up mil-mb-30">Got a project in mind? Let’s talk on WhatsApp.</p>
 
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Enter our email">
-                                        <button type="submit" class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                    </form>
+                                    <div class="mil-subscribe-form mil-up">
+                                        <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20have%20a%20project%20and%20would%20love%20to%20get%20in%20touch." target="_blank" rel="noopener" class="mil-button mil-arrow-place">
+                                            <span>Message us on WhatsApp</span>
+                                        </a>
+                                    </div>
 
                                 </div>
                                 <div class="col-md-7 col-lg-6">
@@ -512,10 +441,27 @@
                                     <div class="mil-vert-between">
                                         <div class="mil-mb-30">
                                             <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li>
+                                                <a href="https://instagram.com/creoaks" target="_blank" rel="noopener" aria-label="Instagram (@creoaks)">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403.61.223 1.045.49 1.503.949.459.458.726.892.949 1.502.163.457.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427a3.92 3.92 0 0 1-.949 1.503 3.92 3.92 0 0 1-1.503.949c-.457.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403a3.92 3.92 0 0 1-1.503-.949 3.92 3.92 0 0 1-.949-1.503c-.163-.457-.347-1.257-.403-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427.223-.61.49-1.045.949-1.503.458-.459.892-.726 1.502-.949.457-.163 1.257-.347 2.427-.403C8.416 2.175 8.796 2.163 12 2.163zm0 1.622c-3.16 0-3.532.012-4.777.069-.999.046-1.542.213-1.9.355-.478.186-.82.408-1.18.768-.36.36-.582.702-.768 1.18-.142.358-.309.901-.355 1.9-.057 1.245-.069 1.617-.069 4.777s.012 3.532.069 4.777c.046.999.213 1.542.355 1.9.186.478.408.82.768 1.18.36.36.702.582 1.18.768.358.142.901.309 1.9.355 1.245.057 1.617.069 4.777.069s3.532-.012 4.777-.069c.999-.046 1.542-.213 1.9-.355.478-.186.82-.408 1.18-.768.36-.36.582-.702.768-1.18.142-.358.309-.901.355-1.9.057-1.245.069-1.617.069-4.777s-.012-3.532-.069-4.777c-.046-.999-.213-1.542-.355-1.9a3.08 3.08 0 0 0-.768-1.18 3.08 3.08 0 0 0-1.18-.768c-.358-.142-.901-.309-1.9-.355-1.245-.057-1.617-.069-4.777-.069zm0 3.905a5.333 5.333 0 1 1 0 10.666 5.333 5.333 0 0 1 0-10.666zm0 1.622a3.711 3.711 0 1 0 0 7.422 3.711 3.711 0 0 0 0-7.422zm5.804-2.034a1.244 1.244 0 1 1 0 2.488 1.244 1.244 0 0 1 0-2.488z"/>
+                                                    </svg>
+                                                </a>
+                                                </li>
+                                                <li>
+                                                <a href="https://www.linkedin.com/company/creoaks" target="_blank" rel="noopener" aria-label="LinkedIn (Creoaks)">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                    <path d="M4.983 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3.5 9h2.966v11H3.5zM9.5 9h2.84v1.507h.04c.396-.75 1.365-1.54 2.81-1.54 3.005 0 3.56 1.98 3.56 4.554V20H15.79v-4.93c0-1.176-.02-2.69-1.64-2.69-1.64 0-1.89 1.282-1.89 2.605V20H9.5V9z"/>
+                                                    </svg>
+                                                </a>
+                                                </li>
+                                                <li>
+                                                <a href="https://twitter.com/creoaks" target="_blank" rel="noopener" aria-label="Twitter (@creoaks)">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                    <path d="M23 4.5a9.4 9.4 0 0 1-2.7.8 4.7 4.7 0 0 0 2.1-2.6 9.5 9.5 0 0 1-3 1.2 4.7 4.7 0 0 0-8 4.3A13.4 13.4 0 0 1 1.7 3.4a4.7 4.7 0 0 0 1.5 6.3 4.6 4.6 0 0 1-2.1-.6v.1a4.7 4.7 0 0 0 3.7 4.6 4.7 4.7 0 0 1-2.1.1 4.7 4.7 0 0 0 4.4 3.3A9.5 9.5 0 0 1 1 19.6a13.3 13.3 0 0 0 7.2 2.1c8.6 0 13.3-7.1 13.3-13.3v-.6A9.5 9.5 0 0 0 23 4.5z"/>
+                                                    </svg>
+                                                </a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <p class="mil-light-soft mil-up">© Copyright 2025 - Creoaks. All Rights Reserved.</p>
