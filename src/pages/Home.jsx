@@ -92,7 +92,7 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="https://www.dropbox.com/scl/fi/zabxwmzoimrw9v2ubbw8q/OfficeIMG.png?rlkey=qdtt1djtxfyvkrz5qm0qfwhzc&st=rs1j3gle&dl=0"
+                  src="https://www.dropbox.com/scl/fi/zabxwmzoimrw9v2ubbw8q/OfficeIMG.png?rlkey=qdtt1djtxfyvkrz5qm0qfwhzc&st=rs1j3gle&raw=1"
                   alt="Creoaks Office"
                   loading="eager"
                   decoding="async"
@@ -135,7 +135,7 @@ const Home = () => {
           className="flex flex-col lg:flex-row gap-10 justify-center items-center mt-16 mb-24">
           <img
             className="w-48 h-24 md:w-56 md:h-28 rounded-full object-cover"
-            src="https://www.dropbox.com/scl/fi/i7goz15wtj2n9rs9yvdup/IdeasIMG.jpeg?rlkey=n6zqntt7syi6045xwosd5dtf0&st=z0fovfly&dl=0"
+            src="https://www.dropbox.com/scl/fi/i7goz15wtj2n9rs9yvdup/IdeasIMG.jpeg?rlkey=n6zqntt7syi6045xwosd5dtf0&st=z0fovfly&raw=1"
             alt="Unique Ideas"
             loading="lazy"
             decoding="async"
@@ -288,7 +288,7 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="https://www.dropbox.com/scl/fi/ievss70eypadzqdz5pkjk/cdirIMG.jpeg?rlkey=bax2ch15e42ag8zix1v2air2z&st=0smlrkju&dl=0"
+                  src="https://www.dropbox.com/scl/fi/ievss70eypadzqdz5pkjk/cdirIMG.jpeg?rlkey=bax2ch15e42ag8zix1v2air2z&st=0smlrkju&raw=1"
                   alt="Creoaks Creative Director"
                   loading="lazy"
                   decoding="async"
