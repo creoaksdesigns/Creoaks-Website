@@ -18,7 +18,10 @@ const ProtectedImage = ({
   alt = "Creoaks Protected Work", 
   className = "", 
   watermarkText = "CREOAKS DESIGN",
-  watermarkPosition = "bottom-right"
+  watermarkPosition = "bottom-right",
+  loading = "lazy",
+  decoding = "async",
+  fetchpriority = "auto"
 }) => {
   
   const getWatermarkPosition = () => {
@@ -45,6 +48,9 @@ const ProtectedImage = ({
         src={src} 
         alt={alt}
         draggable="false"
+        loading={loading}
+        decoding={decoding}
+        fetchpriority={fetchpriority}
         className="w-full h-full object-cover no-drag transition-transform duration-700 group-hover:scale-105"
       />
 

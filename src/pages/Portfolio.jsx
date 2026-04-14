@@ -23,7 +23,7 @@ const Portfolio = () => {
   return (
     <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-auto bg-black text-white pt-32 pb-20 px-8 lg:px-20 overflow-hidden text-center md:text-left">
+      <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -31,7 +31,7 @@ const Portfolio = () => {
           className="max-w-5xl mx-auto"
         >
           <p className="text-gray-400 mb-4 uppercase tracking-widest text-sm">Getting Your Brand Noticed</p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             Designing a Better <br /> World Today
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-6 mt-12">
@@ -46,7 +46,7 @@ const Portfolio = () => {
       </section>
 
       {/* ================= PORTFOLIO GRID ================= */}
-      <section id="portfolio" className="w-full py-24 px-8 lg:px-20 bg-white relative overflow-hidden">
+      <section id="portfolio" className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -77,16 +77,18 @@ const Portfolio = () => {
                   src={item.image}
                   alt={item.title}
                   watermarkText="CREOAKS DESIGN"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
-                {/* View Button Overlay */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20 pointer-events-none group-hover:pointer-events-auto">
+                {/* View Button Overlay - Visible on mobile/touch, hover on desktop */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 bg-black/10 lg:bg-black/20">
                   <a 
                     href={item.image} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-primary transition-all duration-300 transform translate-y-4 group-hover:translate-y-0"
+                    className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-primary transition-all duration-300 transform lg:translate-y-4 lg:group-hover:translate-y-0 shadow-lg"
                   >
                     <span>VIEW</span>
                     <i className="fa-solid fa-arrow-up-right-from-square text-xs"></i>
@@ -109,7 +111,7 @@ const Portfolio = () => {
       </section>
 
       {/* ================= CALL TO ACTION ================= */}
-      <section className="w-full py-24 px-8 lg:px-20 bg-black text-white text-center">
+      <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-black text-white text-center">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -118,7 +120,7 @@ const Portfolio = () => {
           className="max-w-4xl mx-auto flex flex-col items-center"
         >
           <span className="text-primary font-medium tracking-widest uppercase mb-4 block"><SplitText>Got a project in mind?</SplitText></span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight flex flex-wrap justify-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight flex flex-wrap justify-center">
             <span className="w-full m-0"><SplitText delay={0.1}>Ready to bring your ideas to life?</SplitText></span>
             <span className="w-full m-0"><SplitText delay={0.2}>We're here to help</SplitText></span>
           </h2>
@@ -129,7 +131,7 @@ const Portfolio = () => {
             href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20have%20a%20project%20and%20would%20love%20to%20get%20in%20touch."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-full py-4 px-8 bg-primary text-black hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-4 rounded-full py-3 px-6 md:py-4 md:px-8 bg-primary text-black hover:scale-105 transition-all duration-300"
           >
             <i className="fa-brands fa-whatsapp text-2xl"></i>
             <span className="text-lg font-bold">Message us on WhatsApp</span>

@@ -92,7 +92,7 @@ const Services = () => {
   return (
     <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-auto bg-black text-white pt-32 pb-20 px-8 lg:px-20 overflow-hidden text-center md:text-left">
+      <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -100,7 +100,7 @@ const Services = () => {
           className="max-w-5xl mx-auto"
         >
           <p className="text-gray-400 mb-4 uppercase tracking-widest text-sm"><SplitText>Getting Your Brand Noticed</SplitText></p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight flex flex-wrap justify-center md:justify-start">
+          <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight flex flex-wrap justify-center md:justify-start">
             <p className="w-full m-0"><SplitText>Brand Design</SplitText></p>
             <p className="w-full m-0"><SplitText delay={0.2}>and Printing</SplitText></p>
           </h1>
@@ -116,7 +116,7 @@ const Services = () => {
       </section>
 
       {/* ================= OUR APPROACH ================= */}
-      <section id="approach" className="w-full py-24 px-8 lg:px-20 bg-white">
+      <section id="approach" className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -125,7 +125,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="lg:sticky lg:top-32"
           >
-            <h2 className="text-4xl md:text-5xl mb-8 text-black leading-tight border-b-0 flex flex-wrap">
+            <h2 className="text-3xl md:text-5xl mb-8 text-black leading-tight border-b-0 flex flex-wrap">
               <span className="w-full m-0"><SplitText>Our Approach</SplitText></span>
               <span className="w-full m-0"><SplitText delay={0.1}>and Work Specifics</SplitText></span>
             </h2>
@@ -212,10 +212,10 @@ const Services = () => {
       </section>
 
       {/* ================= SERVICES GRID ================= */}
-      <section id="services" className="w-full py-24 px-8 lg:px-20 bg-white">
+      <section id="services" className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4"><SplitText>Our Services</SplitText></h2>
+          <div className="text-center mb-16 px-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-4"><SplitText>Our Services</SplitText></h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
           
@@ -227,7 +227,7 @@ const Services = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut", delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="group cursor-pointer bg-white p-10 lg:p-12 border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all duration-500"
+                className="group cursor-pointer bg-white p-8 md:p-10 lg:p-12 border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all duration-500"
               >
                 <h3 className="text-3xl font-bold text-black mb-8 leading-tight">
                   {service.title.split(' ').map((word, i) => (
@@ -267,7 +267,7 @@ const Services = () => {
       </section>
 
       {/* ================= CALL TO ACTION ================= */}
-      <section className="w-full py-24 px-8 lg:px-20 bg-black text-white text-center">
+      <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-black text-white text-center">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -276,7 +276,7 @@ const Services = () => {
           className="max-w-4xl mx-auto flex flex-col items-center"
         >
           <span className="text-primary font-medium tracking-widest uppercase mb-4 block"><SplitText>Got a project in mind?</SplitText></span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight flex flex-wrap justify-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight flex flex-wrap justify-center">
             <span className="w-full m-0"><SplitText delay={0.1}>Ready to bring your ideas to life?</SplitText></span>
             <span className="w-full m-0"><SplitText delay={0.2}>We're here to help</SplitText></span>
           </h2>
@@ -287,7 +287,7 @@ const Services = () => {
             href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20have%20a%20project%20and%20would%20love%20to%20get%20in%20touch."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-full py-4 px-8 bg-primary text-black hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-4 rounded-full py-3 px-6 md:py-4 md:px-8 bg-primary text-black hover:scale-105 transition-all duration-300"
           >
             <i className="fa-brands fa-whatsapp text-2xl"></i>
             <span className="text-lg font-bold">Message us on WhatsApp</span>

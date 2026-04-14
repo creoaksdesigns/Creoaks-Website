@@ -59,8 +59,8 @@ useEffect(() => {
 
   return (
     <header className="bg-black sticky top-0 z-50 py-2">
-      <div className="container-max flex items-center justify-between py-3 md:py-4">
-        <img src="/logos/creoaksLogo.png" alt="creoaksLogo" className="h-6 md:h-10 w-auto" />
+      <div className="container-max flex items-center justify-between py-4">
+        <img src="/logos/creoaksLogo.png" alt="creoaksLogo" decoding="async" className="h-8 md:h-10 w-auto" />
 
         <button
           onClick={() => setIsOpen((open) => !open)}
@@ -86,9 +86,9 @@ useEffect(() => {
       </div>
 
       {menuVisible && (
-        <div className={`fixed inset-0 z-40 top-20 md:top-30 bg-black text-white transition-opacity duration-500 ${bgVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className={`absolute inset-y-0 left-0 flex items-center px-8 transform transition-all duration-500 ${isAnimatingIn ? 'translate-x-0 opacity-100' : ''}`}>
-            <nav className="w-full max-w-md space-y-8 text-left">
+        <div className={`fixed inset-0 z-40 top-[72px] md:top-24 bg-black text-white transition-opacity duration-500 ${bgVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`absolute inset-y-0 left-0 flex items-center px-10 md:px-20 transform transition-all duration-500 ${isAnimatingIn ? 'translate-x-0 opacity-100' : ''}`}>
+            <nav className="w-full max-w-md space-y-6 md:space-y-8 text-left">
               {links.map((link, index) => (
                 <NavLink
                     key={link.to}
@@ -96,7 +96,7 @@ useEffect(() => {
                     end={link.to === '/'}
                     onClick={() => setIsOpen(false)}
                     className={({ isActive }) =>
-                    `block text-3xl transition-all duration-500 ${
+                    `block text-4xl md:text-5xl transition-all duration-500 ${
                         isAnimatingIn
                         ? 'translate-x-0 opacity-100'
                         : '-translate-x-full opacity-0'

@@ -36,8 +36,8 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 md:px-16 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <footer className="bg-black text-white px-6 md:px-12 lg:px-20 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12">
 
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-6 items-start">
@@ -46,6 +46,8 @@ const Footer = () => {
             <img
               src="/logos/creoaksLogo.png"
               alt="Creoaks Logo"
+              loading="lazy"
+              decoding="async"
               className="w-40"
             />
           </Link>
@@ -64,7 +66,7 @@ const Footer = () => {
           <a href="https://wa.me/2349029967800?text=Hello%20Creoaks%20team%2C%20I%20have%20a%20project%20and%20would%20love%20to%20get%20in%20touch." 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group flex items-center justify-between bg-primary text-black px-6 py-4 rounded-full w-full max-w-sm hover:scale-105 transition"
+            className="group flex items-center justify-between bg-primary text-black px-6 py-3 md:py-4 rounded-full w-full max-w-sm hover:scale-105 transition"
           >
             <span className="tracking-widest text-sm">
               <SplitText delay={0.1}>MESSAGE US ON WHATSAPP</SplitText>

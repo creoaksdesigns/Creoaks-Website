@@ -36,14 +36,14 @@ const Home = () => {
       <section className="relative w-full h-auto bg-white overflow-hidden">
 
         {/* ================= BACKGROUND SCROLL TEXT ================= */}
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-10">
+        <div className="absolute inset-0 hidden md:flex items-center justify-center z-0 pointer-events-none opacity-10">
 
           {/* Rotate to make the text vertical */}
           <div className="rotate-90">
             <ScrollVelocity
               texts={['Creoaks']}
               velocity={-100} // Negative value makes it scroll upward
-              className="whitespace-nowrap text-8xl lg:text-[150px] font-bold text-gray-900"
+              className="whitespace-nowrap text-6xl md:text-8xl lg:text-[150px] font-bold text-gray-900"
             />
           </div>
 
@@ -92,15 +92,18 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="/images/OfficeIMG.png"
+                  src="https://www.dropbox.com/scl/fi/zabxwmzoimrw9v2ubbw8q/OfficeIMG.png?rlkey=qdtt1djtxfyvkrz5qm0qfwhzc&st=rs1j3gle&dl=0"
                   alt="Creoaks Office"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
 
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   viewport={{ once: false, margin: "-100px" }}
 
-                  className="h-screen w-auto md:h-auto md:w-96 object-cover rounded-2xl"
+                  className="h-[400px] md:h-auto w-full md:w-96 object-cover rounded-2xl"
                 />
 
               </div>
@@ -120,7 +123,7 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: false, margin: "-100px" }}
           className="text-gray-400 flex justify-center md:justify-end pt-10">
-          <p className="">Professionals focused on helping your brand <br /> <span>grow and move foward</span></p>
+          <p className="text-center md:text-right">Professionals focused on helping your brand grow and move forward</p>
           <div className="w-60 h-1 mt-2 ml-4 bg-gray-400 hidden md:flex" />
         </motion.div>
 
@@ -130,7 +133,13 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           viewport={{ once: false, margin: "-100px" }}
           className="flex flex-col lg:flex-row gap-10 justify-center items-center mt-16 mb-24">
-          <img className="w-40 h-20 md:w-56 md:h-28 rounded-full object-cover" src="/images/IdeasIMG.jpeg" alt="Unique Ideas" />
+          <img
+            className="w-48 h-24 md:w-56 md:h-28 rounded-full object-cover"
+            src="https://www.dropbox.com/scl/fi/i7goz15wtj2n9rs9yvdup/IdeasIMG.jpeg?rlkey=n6zqntt7syi6045xwosd5dtf0&st=z0fovfly&dl=0"
+            alt="Unique Ideas"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="text-white text-4xl md:text-5xl lg:text-7xl text-center">
             <h1>Unique ideas</h1>
             <h1>For Your Business.</h1>
@@ -146,8 +155,8 @@ const Home = () => {
           </Link>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4  gap-0 justify-center items-center px-12 lg:px-20">
-          <div className="group relative overflow-hidden w-full h-96 bg-transparent border-primary lg:border-gray-400/10 text-white flex flex-col p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 justify-center items-center px-6 md:px-12 lg:px-20">
+          <div className="group relative overflow-hidden w-full h-auto min-h-[350px] md:h-96 bg-transparent border-primary/20 lg:border-gray-400/10 text-white flex flex-col p-8 md:p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
             {/* Animated top border */}
             <span className="absolute top-0 left-0 h-1 w-full bg-primary scale-x-100 lg:scale-x-0 origin-left transition-transform duration-500 lg:group-hover:scale-x-100"></span>
             <motion.div
@@ -164,7 +173,7 @@ const Home = () => {
             </motion.div>
           </div>
 
-          <div className="group relative overflow-hidden w-full h-96 bg-transparent border-primary lg:border-gray-400/10 text-white flex flex-col p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
+          <div className="group relative overflow-hidden w-full h-auto min-h-[350px] md:h-96 bg-transparent border-primary/20 lg:border-gray-400/10 text-white flex flex-col p-8 md:p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
             {/* Animated top border */}
             <span className="absolute top-0 left-0 h-1 w-full bg-primary scale-x-100 lg:scale-x-0 origin-left transition-transform duration-500 lg:group-hover:scale-x-100"></span>
             <motion.div
@@ -180,7 +189,7 @@ const Home = () => {
               </Link>
             </motion.div>
           </div>
-          <div className="group relative overflow-hidden w-full h-96 bg-transparent border-primary lg:border-gray-400/10 text-white flex flex-col p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
+          <div className="group relative overflow-hidden w-full h-auto min-h-[350px] md:h-96 bg-transparent border-primary/20 lg:border-gray-400/10 text-white flex flex-col p-8 md:p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
             {/* Animated top border */}
             <span className="absolute top-0 left-0 h-1 w-full bg-primary scale-x-100 lg:scale-x-0 origin-left transition-transform duration-500 lg:group-hover:scale-x-100"></span>
 
@@ -197,7 +206,7 @@ const Home = () => {
               </Link>
             </motion.div>
           </div>
-          <div className="group relative overflow-hidden w-full h-96 bg-transparent border-primary lg:border-gray-400/10 text-white flex flex-col p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
+          <div className="group relative overflow-hidden w-full h-auto min-h-[350px] md:h-96 bg-transparent border-primary/20 lg:border-gray-400/10 text-white flex flex-col p-8 md:p-10 lg:p-5 lg:hover:border-primary transition-all duration-500">
             {/* Animated top border */}
             <span className="absolute top-0 left-0 h-1 w-full bg-primary scale-x-100 lg:scale-x-0 origin-left transition-transform duration-500 lg:group-hover:scale-x-100"></span>
             <motion.div
@@ -221,14 +230,14 @@ const Home = () => {
       <section className="relative w-full h-auto bg-white overflow-hidden">
 
         {/* ================= BACKGROUND SCROLL TEXT ================= */}
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-10">
+        <div className="absolute inset-0 hidden md:flex items-center justify-center z-0 pointer-events-none opacity-10">
 
           {/* Rotate to make the text vertical */}
           <div className="rotate-90">
             <ScrollVelocity
               texts={['Creoaks']}
               velocity={-100} // Negative value makes it scroll upward
-              className="whitespace-nowrap text-8xl lg:text-[150px] font-bold text-gray-900"
+              className="whitespace-nowrap text-6xl md:text-8xl lg:text-[150px] font-bold text-gray-900"
             />
           </div>
 
@@ -279,20 +288,22 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="/images/cdirIMG.jpeg"
-                  alt="Creoaks Office"
+                  src="https://www.dropbox.com/scl/fi/ievss70eypadzqdz5pkjk/cdirIMG.jpeg?rlkey=bax2ch15e42ag8zix1v2air2z&st=0smlrkju&dl=0"
+                  alt="Creoaks Creative Director"
+                  loading="lazy"
+                  decoding="async"
 
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   viewport={{ once: false, margin: "-100px" }}
 
-                  className="h-96 w-auto md:h-auto md:w-96 object-cover rounded-2xl"
+                  className="h-[400px] md:h-auto w-full md:w-96 object-cover rounded-2xl"
                 />
 
               </div>
 
-              <p className="text-4xl leading-relaxed mx-20 my-4 text-center lg:text-left">
+              <p className="text-3xl md:text-4xl leading-relaxed mx-6 md:mx-20 my-4 text-center lg:text-left">
                 We deliver <br /><span>exceptional results.</span>
               </p>
             </div>
@@ -327,7 +338,7 @@ const Home = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
             className="text-center mt-16 mb-16"
           >
-            <h1 className="text-black text-4xl md:text-5xl lg:text-7xl">
+            <h1 className="text-black text-3xl md:text-5xl lg:text-7xl">
               Client Testimonials <br />
               Real Stories, Real Results
             </h1>
@@ -360,7 +371,7 @@ const Home = () => {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="text-center max-w-2xl px-12 cursor-grab active:cursor-grabbing"
+              className="text-center max-w-2xl px-6 md:px-12 cursor-grab active:cursor-grabbing"
             >
               <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
                 {testimonials[index].name}
