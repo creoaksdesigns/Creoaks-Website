@@ -12,6 +12,28 @@
     font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     color: #1f2937;
     background: #f8fafc;
+    
+    /* Firefox scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #ff9800 #f1f1f1;
+  }
+
+  /* WebKit (Chrome, Edge, Safari) scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e68a00;
   }
 
   #root {

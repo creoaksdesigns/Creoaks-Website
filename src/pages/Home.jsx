@@ -1,5 +1,5 @@
 import Hero from '../components/Hero';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ScrollVelocity from '../components/ScrollVelocity';
 import LogoLoop from '../components/LogoLoop';
 import { useState, useEffect, useRef } from 'react';
@@ -92,7 +92,7 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="https://www.dropbox.com/scl/fi/zabxwmzoimrw9v2ubbw8q/OfficeIMG.png?rlkey=qdtt1djtxfyvkrz5qm0qfwhzc&st=rs1j3gle&raw=1"
+                  src="/images/office.webp"
                   alt="Creoaks Office"
                   loading="eager"
                   decoding="async"
@@ -135,7 +135,7 @@ const Home = () => {
           className="flex flex-col lg:flex-row gap-10 justify-center items-center mt-16 mb-24">
           <img
             className="w-48 h-24 md:w-56 md:h-28 rounded-full object-cover"
-            src="https://www.dropbox.com/scl/fi/i7goz15wtj2n9rs9yvdup/IdeasIMG.jpeg?rlkey=n6zqntt7syi6045xwosd5dtf0&st=z0fovfly&raw=1"
+            src="/images/ideas.webp"
             alt="Unique Ideas"
             loading="lazy"
             decoding="async"
@@ -288,7 +288,7 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="https://www.dropbox.com/scl/fi/ievss70eypadzqdz5pkjk/cdirIMG.jpeg?rlkey=bax2ch15e42ag8zix1v2air2z&st=0smlrkju&raw=1"
+                  src="/images/cdir.webp"
                   alt="Creoaks Creative Director"
                   loading="lazy"
                   decoding="async"
@@ -352,49 +352,52 @@ const Home = () => {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="absolute left-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 flex items-center justify-center hover:bg-gray-500 transition z-20"
+              className="hidden md:flex absolute left-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 items-center justify-center hover:bg-gray-500 transition z-20"
             >
               <i className="fa-solid fa-arrow-left text-gray-600"></i>
             </motion.button>
 
             {/* TEXT */}
-            <motion.div
-              key={`text-${index}`}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={(e, info) => {
-                const threshold = 60;
-                if (info.offset.x < -threshold) next();
-                else if (info.offset.x > threshold) prev();
-              }}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="text-center max-w-2xl px-6 md:px-12 cursor-grab active:cursor-grabbing"
-            >
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                {testimonials[index].name}
-              </h3>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`text-${index}`}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={(e, info) => {
+                  const threshold = 60;
+                  if (info.offset.x < -threshold) next();
+                  else if (info.offset.x > threshold) prev();
+                }}
+                initial={{ x: 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -50, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="text-center max-w-2xl px-6 md:px-12 cursor-grab active:cursor-grabbing"
+              >
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                  {testimonials[index].name}
+                </h3>
 
-              {testimonials[index].organization && (
-                <p className="text-xs tracking-widest text-gray-500 uppercase mt-1">
-                  {testimonials[index].organization}
+                {testimonials[index].organization && (
+                  <p className="text-xs tracking-widest text-gray-500 uppercase mt-1">
+                    {testimonials[index].organization}
+                  </p>
+                )}
+
+                <p className="text-xs tracking-widest text-gray-400 lowercase mt-1 mb-6">
+                  {testimonials[index].email}
                 </p>
-              )}
 
-              <p className="text-xs tracking-widest text-gray-400 lowercase mt-1 mb-6">
-                {testimonials[index].email}
-              </p>
+                <div className="text-orange-500 text-5xl leading-none mb-4">
+                  &#8221;
+                </div>
 
-              <div className="text-orange-500 text-5xl leading-none mb-4">
-                &#8221;
-              </div>
-
-              <p className="text-gray-800 text-sm md:text-lg leading-relaxed">
-                {testimonials[index].text}
-              </p>
-            </motion.div>
+                <p className="text-gray-800 text-sm md:text-lg leading-relaxed">
+                  {testimonials[index].text}
+                </p>
+              </motion.div>
+            </AnimatePresence>
 
             {/* RIGHT BUTTON */}
             <motion.button
@@ -402,11 +405,34 @@ const Home = () => {
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-              className="absolute right-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 flex items-center justify-center hover:bg-gray-500 transition z-20"
+              className="hidden md:flex absolute right-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 items-center justify-center hover:bg-gray-500 transition z-20"
             >
               <i className="fa-solid fa-arrow-right text-gray-600"></i>
             </motion.button>
 
+          </div>
+
+          {/* MOBILE NAVIGATION BUTTONS */}
+          <div className="flex md:hidden items-center justify-center gap-6 mt-8">
+            <motion.button
+              onClick={prev}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+              className="w-12 h-12 rounded-full bg-gray-400 flex items-center justify-center hover:bg-gray-500 transition z-20"
+            >
+              <i className="fa-solid fa-arrow-left text-gray-600"></i>
+            </motion.button>
+
+            <motion.button
+              onClick={next}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+              className="w-12 h-12 rounded-full bg-gray-400 flex items-center justify-center hover:bg-gray-500 transition z-20"
+            >
+              <i className="fa-solid fa-arrow-right text-gray-600"></i>
+            </motion.button>
           </div>
         </div>
 

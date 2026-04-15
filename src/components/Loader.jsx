@@ -33,7 +33,7 @@ export default function Loader({ onFinish }) {
             {stage < 2 && (
               <motion.div
                 key="stage1"
-                className="flex gap-3 text-white text-3xl md:text-5xl font-semibold"
+                className="flex flex-col items-center md:flex-row gap-3 text-white text-3xl md:text-5xl font-semibold"
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
               >

@@ -8,7 +8,7 @@ export default function Hero() {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="relative w-full h-auto bg-black flex items-start justify-center pt-16 overflow-hidden"
+      className="relative w-full h-auto bg-black flex flex-col items-center pt-16 overflow-hidden"
     >
 
       {/* Background */}
@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl w-full flex-1 flex flex-col py-10 md:py-0 md:justify-center md:items-center">
 
         <div className="overflow-hidden">
           <motion.div
@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: false, margin: "-100px" }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold leading-tight">
+            <h1 className="text-4xl mb-10 md:mb-0 md:text-5xl lg:text-7xl font-semibold leading-tight">
               Designs that Tell <br />
               <span>Your Story</span>
             </h1>
