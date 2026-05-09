@@ -79,7 +79,7 @@ export default function Hero() {
                 to="/portfolio"
                 className="group flex items-center gap-4 rounded-full py-3 px-6 text-white hover:scale-105 transition-all duration-300"
               >
-                <span className="text-sm font-medium">VIEW WORKS</span>
+                <span className="text-sm font-medium">WHAT WE'VE DONE</span>
                 <div className="bg-gray-900 p-3 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                   <i className="fa-solid fa-arrow-right text-white"></i>
                 </div>

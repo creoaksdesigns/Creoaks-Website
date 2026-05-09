@@ -1,24 +1,9 @@
 import { motion } from "framer-motion";
 import ProtectedImage from "../components/ProtectedImage";
 import SplitText from "../components/SplitText";
-
-const portfolioItems = [
-  {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/nadfNotebook.jpeg",
-  },
-  {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/nadfENV.jpeg",
-  },
-];
+import portfolioItems from "../portfolioData";
 
 const Portfolio = () => {
-
 
   return (
     <div className="w-full bg-white relative">
@@ -36,7 +21,7 @@ const Portfolio = () => {
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-6 mt-12">
             <a href="#portfolio" className="flex items-center gap-4 rounded-full py-3 px-6 bg-primary text-black hover:scale-105 transition-all duration-300">
-              <span className="text-sm font-medium">OUR WORKS</span>
+              <span className="text-sm font-medium">OUR DESIGNS</span>
               <div className="bg-black p-3 rounded-full flex items-center justify-center">
                 <i className="fa-solid fa-arrow-down text-primary"></i>
               </div>
@@ -62,7 +47,7 @@ const Portfolio = () => {
           </svg>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-12 max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 max-w-7xl mx-auto relative z-10">
           {portfolioItems.map((item, index) => (
             <motion.div
               key={index}
@@ -81,29 +66,19 @@ const Portfolio = () => {
                   decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* View Button Overlay - Visible on mobile/touch, hover on desktop */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 bg-black/10 lg:bg-black/20">
-                  <a 
-                    href={item.image} 
-                    target="_blank" 
+                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/10 lg:bg-black/20">
+                  <a
+                    href={item.image}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-primary transition-all duration-300 transform lg:translate-y-4 lg:group-hover:translate-y-0 shadow-lg"
+                    className="bg-white text-black px-3 py-2 md:px-6 rounded-full font-bold text-xs md:text-sm flex items-center gap-2 hover:bg-gray-600 transition-all duration-300 transform lg:translate-y-4 lg:group-hover:translate-y-0 shadow-lg"
                   >
                     <span>VIEW</span>
                     <i className="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                   </a>
                 </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center gap-3 text-[10px] md:text-xs font-bold tracking-[0.2em]">
-                  <span className="text-primary uppercase">{item.category}</span>
-                  <span className="text-gray-400 uppercase">{item.date}</span>
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
-                  {item.title}
-                </h3>
               </div>
             </motion.div>
           ))}

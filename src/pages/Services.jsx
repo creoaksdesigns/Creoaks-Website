@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const approachSteps = [
   {
@@ -130,17 +131,17 @@ const Services = () => {
               <span className="w-full m-0"><SplitText delay={0.1}>and Work Specifics</SplitText></span>
             </h2>
             <p className="text-gray-500 mb-12 leading-relaxed max-w-sm">
-              You want your brand to get noticed. Sometimes that means deploying marketing campaigns. Other times, it’s getting the right brand designs or print materials—fast and stress-free.At Creoaks, we guide you through a clear, proven process to get results:
+              You want your brand to get noticed. Sometimes that means deploying marketing campaigns. Other times, it’s getting the right brand designs or print materials—fast and stress-free. At Creoaks, we guide you through a clear, proven process to get results:
             </p>
-            <a
-              href="#services"
+            <Link
+              to="/portfolio"
               className="inline-flex items-center gap-4 text-black text-sm font-bold tracking-widest uppercase hover:opacity-75 transition-opacity"
             >
               VIEW WORKS
               <div className="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center">
                 <i className="fa-solid fa-arrow-right text-gray-700"></i>
               </div>
-            </a>
+            </Link>
           </motion.div>
           
           <motion.div

@@ -86,7 +86,7 @@ useEffect(() => {
       </div>
 
       {menuVisible && (
-        <div className={`fixed inset-0 z-40 top-[72px] md:top-24 bg-black text-white transition-opacity duration-500 ${bgVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`fixed inset-0 z-40 top-[72px] md:top-16 bg-black text-white transition-opacity duration-500 ${bgVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className={`absolute inset-y-0 left-0 flex items-center px-10 md:px-20 transform transition-all duration-500 ${isAnimatingIn ? 'translate-x-0 opacity-100' : ''}`}>
             <nav className="w-full max-w-md space-y-6 md:space-y-8 text-left">
               {links.map((link, index) => (
