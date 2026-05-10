@@ -30,7 +30,7 @@ const SplitText = ({ children, delay = 0 }) => {
 
 const links = [
   { to: '/', label: <SplitText>Homepage</SplitText> },
-  { to: '/portfolio', label: <SplitText>Portfolio</SplitText> },
+  { to: '/portfolio', label: <SplitText>Gallery</SplitText> },
   { to: '/services', label: <SplitText>Services</SplitText> },
 ]
 
