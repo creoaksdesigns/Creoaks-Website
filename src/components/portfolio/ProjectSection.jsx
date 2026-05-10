@@ -19,7 +19,7 @@ const ProjectSection = ({ project }) => {
       className="mb-32 mx-4 my-4"
     >
       {/* TITLE */}
-      <h2 className="text-sm uppercase tracking-[0.2em] mb-6 text-black font-medium text-center">
+      <h2 className="text-lg uppercase tracking-[0.2em] mb-6 text-black font-bold text-center">
         {project.title}
       </h2>
 

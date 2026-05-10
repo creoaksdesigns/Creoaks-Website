@@ -42,7 +42,7 @@ const Portfolio = () => {
 </div>
 
       {/* ================= CALL TO ACTION ================= */}
-      <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-black text-white text-center">
+      <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-black text-white text-center mt-4">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
