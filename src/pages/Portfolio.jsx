@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ProtectedImage from "../components/ProtectedImage";
 import SplitText from "../components/SplitText";
 import portfolioItems from "../portfolioData";
+import ProjectSection from "../components/portfolio/ProjectSection";
 
 const Portfolio = () => {
 
@@ -31,59 +32,14 @@ const Portfolio = () => {
       </section>
 
       {/* ================= PORTFOLIO GRID ================= */}
-      <section id="portfolio" className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="circles" width="400" height="400" patternUnits="userSpaceOnUse">
-                <circle cx="200" cy="200" r="100" fill="none" stroke="currentColor" strokeWidth="1" />
-                <circle cx="200" cy="200" r="200" fill="none" stroke="currentColor" strokeWidth="1" />
-                <line x1="0" y1="200" x2="400" y2="200" stroke="currentColor" strokeWidth="1" />
-                <line x1="200" y1="0" x2="200" y2="400" stroke="currentColor" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#circles)" />
-          </svg>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 max-w-7xl mx-auto relative z-10">
-          {portfolioItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: (index % 3) * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              className="group cursor-pointer"
-            >
-              <div className="overflow-hidden mb-6 aspect-[16/10] relative">
-                <ProtectedImage
-                  src={item.image}
-                  alt={item.title}
-                  watermarkText="CREOAKS DESIGN"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-
-                {/* View Button Overlay - Visible on mobile/touch, hover on desktop */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/10 lg:bg-black/20">
-                  <a
-                    href={item.image}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-black px-3 py-2 md:px-6 rounded-full font-bold text-xs md:text-sm flex items-center gap-2 hover:bg-gray-600 transition-all duration-300 transform lg:translate-y-4 lg:group-hover:translate-y-0 shadow-lg"
-                  >
-                    <span>VIEW</span>
-                    <i className="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto relative z-10 space-y-32">
+  {portfolioItems.map((project, index) => (
+    <ProjectSection
+      key={index}
+      project={project}
+    />
+  ))}
+</div>
 
       {/* ================= CALL TO ACTION ================= */}
       <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-black text-white text-center">

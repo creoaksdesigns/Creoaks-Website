@@ -1,78 +1,19 @@
-const portfolioItems = [
+import musso1 from "./assets/portfolio/mussoPalace/01.jpg";
+import musso2 from "./assets/portfolio/mussoPalace/02.jpg";
+import musso3 from "./assets/portfolio/mussoPalace/03.jpg";
+import musso4 from "./assets/portfolio/mussoPalace/04.jpg";
+import musso5 from "./assets/portfolio/mussoPalace/05.jpg";
+import musso6 from "./assets/portfolio/mussoPalace/06.jpg";
+import musso7 from "./assets/portfolio/mussoPalace/07.jpg";
+import musso8 from "./assets/portfolio/mussoPalace/08.jpg";
+import musso9 from "./assets/portfolio/mussoPalace/09.jpg";
+import musso10 from "./assets/portfolio/mussoPalace/10.jpg";
+
+const portfolioData = [
   {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/SprayCan.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/Box.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/deliveryNote.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/giftBag.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/InventoryBook.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/InventoryBookPages.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/Label.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/NylonBag.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/OvalLabel.jpg",
-  },
-    {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/mussoPalace/sticker.jpg",
-  },
-  {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/nadf/Notebook.jpeg",
-  },
-  {
-    title: "Printing and Production",
-    category: "BRANDING",
-    date: "APRIL 13 2026",
-    image: "/portfolioimgs/nadf/envelope.jpeg",
+    title: "Musso Palace",
+    images: [musso1, musso2, musso3, musso4, musso5, musso6, musso7, musso8, musso9, musso10],
   },
 ];
 
-export default portfolioItems
-
-
+export default portfolioData;
