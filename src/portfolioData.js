@@ -43,6 +43,8 @@ import BRATIM9 from "./assets/portfolio/BRATIM/09.png";
 import BRATIM10 from "./assets/portfolio/BRATIM/10.png";
 import BRATIM11 from "./assets/portfolio/BRATIM/11.png";
 import BRATIM12 from "./assets/portfolio/BRATIM/12.png";
+import BRATIM13 from "./assets/portfolio/BRATIM/13.png";
+import BRATIM14 from "./assets/portfolio/BRATIM/13.png";
 
 import FGCK1 from "./assets/portfolio/FGCK/01.png";
 import FGCK2 from "./assets/portfolio/FGCK/02.png";
@@ -84,7 +86,7 @@ const portfolioData = [
   
   {
     title: "BRATIM",
-    images: [BRATIM1, BRATIM2, BRATIM3, BRATIM4, BRATIM5, BRATIM6, BRATIM7, BRATIM8, BRATIM9, BRATIM10, BRATIM11, BRATIM12],
+    images: [BRATIM1, BRATIM2, BRATIM3, BRATIM4, BRATIM5, BRATIM6, BRATIM7, BRATIM8, BRATIM9, BRATIM10, BRATIM11, BRATIM12, BRATIM13, BRATIM14],
   },
   
   {
