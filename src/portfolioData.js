@@ -44,7 +44,7 @@ import BRATIM10 from "./assets/portfolio/BRATIM/10.png";
 import BRATIM11 from "./assets/portfolio/BRATIM/11.png";
 import BRATIM12 from "./assets/portfolio/BRATIM/12.png";
 import BRATIM13 from "./assets/portfolio/BRATIM/13.png";
-import BRATIM14 from "./assets/portfolio/BRATIM/13.png";
+import BRATIM14 from "./assets/portfolio/BRATIM/14.png";
 
 import FGCK1 from "./assets/portfolio/FGCK/01.png";
 import FGCK2 from "./assets/portfolio/FGCK/02.png";
