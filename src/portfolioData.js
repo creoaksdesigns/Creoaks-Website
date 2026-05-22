@@ -1,3 +1,20 @@
+import GIFTIES1 from "./assets/portfolio/GIFTIES/01.png";
+import GIFTIES2 from "./assets/portfolio/GIFTIES/02.png";
+import GIFTIES3 from "./assets/portfolio/GIFTIES/03.png";
+import GIFTIES4 from "./assets/portfolio/GIFTIES/04.png";
+import GIFTIES5 from "./assets/portfolio/GIFTIES/05.png";
+import GIFTIES6 from "./assets/portfolio/GIFTIES/06.png";
+import GIFTIES7 from "./assets/portfolio/GIFTIES/07.png";
+import GIFTIES8 from "./assets/portfolio/GIFTIES/08.png";
+import GIFTIES9 from "./assets/portfolio/GIFTIES/09.png";
+import GIFTIES10 from "./assets/portfolio/GIFTIES/10.png";
+import GIFTIES11 from "./assets/portfolio/GIFTIES/11.png";
+import GIFTIES12 from "./assets/portfolio/GIFTIES/12.png";
+import GIFTIES13 from "./assets/portfolio/GIFTIES/13.png";
+import GIFTIES14 from "./assets/portfolio/GIFTIES/14.png";
+import GIFTIES15 from "./assets/portfolio/GIFTIES/15.png";
+import GIFTIES16 from "./assets/portfolio/GIFTIES/16.png";
+
 import musso1 from "./assets/portfolio/mussoPalace/01.jpg";
 import musso2 from "./assets/portfolio/mussoPalace/02.jpg";
 import musso3 from "./assets/portfolio/mussoPalace/03.jpg";
@@ -59,6 +76,11 @@ import InspireAcademy5 from "./assets/portfolio/InspireAcademy/05.png";
 import InspireAcademy6 from "./assets/portfolio/InspireAcademy/06.png";
 
 const portfolioData = [
+    {
+    title: "Gifties",
+    images: [GIFTIES1, GIFTIES2, GIFTIES3, GIFTIES4, GIFTIES5, GIFTIES6, GIFTIES7, GIFTIES8, GIFTIES9, GIFTIES10, GIFTIES11, GIFTIES12, GIFTIES13, GIFTIES14, GIFTIES15, GIFTIES16],
+  },
+  
   {
     title: "Musso Palace",
     images: [musso1, musso2, musso3, musso4, musso5, musso6, musso7, musso8, musso9, musso10],
