@@ -91,6 +91,16 @@ const Services = () => {
   const [openAccordion, setOpenAccordion] = useState(0);
 
   return (
+    
+    <Helmet>
+  <title>Branding, Printing & Web Design Services | Creoaks</title>
+
+  <meta
+    name="description"
+    content="Creoaks Designs & Prints offers professional branding, graphic design, printing, packaging, and creative solutions for businesses in Nigeria."
+  />
+</Helmet>
+    
     <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">

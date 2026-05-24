@@ -7,6 +7,16 @@ import ProjectSection from "../components/portfolio/ProjectSection";
 const Portfolio = () => {
 
   return (
+    
+    <Helmet>
+  <title>Our Portfolio | Creoaks Designs & Prints</title>
+
+  <meta
+    name="description"
+    content="Explore our portfolio of creative branding, graphic design, printing, and visual identity projects for businesses and brands in Nigeria."
+  />
+</Helmet>
+    
     <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">

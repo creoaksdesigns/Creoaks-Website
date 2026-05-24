@@ -5,6 +5,7 @@ import LogoLoop from '../components/LogoLoop';
 import { useState, useEffect, useRef } from 'react';
 import testimonials from '../data';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -28,6 +29,14 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Creoaks Designs & Prints | Branding Agency</title>
+
+        <meta
+          name="description"
+          content="Professional branding, printing and web design services in Nigeria."
+        />
+      </Helmet>
       {/* ================= HERO SECTION ================= */}
       <Hero />
 
