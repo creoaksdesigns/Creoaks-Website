@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
-import Documentation from './pages/Documentation'
-import Contact from './pages/Contact'
 import { useEffect, useState } from "react"
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'

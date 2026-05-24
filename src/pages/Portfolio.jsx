@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 import ProtectedImage from "../components/ProtectedImage";
 import SplitText from "../components/SplitText";
