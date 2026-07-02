@@ -5,7 +5,7 @@ import LogoLoop from '../components/LogoLoop';
 import { useState, useEffect, useRef } from 'react';
 import testimonials from '../data';
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet-async";
+import SEO from '../components/SEO';
 
 
 const Home = () => {
@@ -29,14 +29,26 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Creoaks Designs & Prints | Branding Agency</title>
-
-        <meta
-          name="description"
-          content="Professional branding, printing and web design services in Nigeria."
-        />
-      </Helmet>
+      <SEO
+        title="Home"
+        description="Creoaks provides professional branding, graphic design, printing, packaging, and web design services for businesses and events in Nigeria."
+        path="/"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Creoaks Designs & Prints',
+          url: 'https://creoaks.com',
+          logo: 'https://creoaks.com/logos/creoaksLogo.webp',
+          sameAs: ['https://www.instagram.com/creoaks/', 'https://www.tiktok.com/@creoaks0', 'https://x.com/Cre0aks'],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+2349029967800',
+            contactType: 'customer service',
+            areaServed: 'NG',
+            availableLanguage: ['English']
+          }
+        }}
+      />
       {/* ================= HERO SECTION ================= */}
       <Hero />
 

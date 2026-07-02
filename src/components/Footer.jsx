@@ -30,7 +30,7 @@ const SplitText = ({ children, delay = 0 }) => {
 
 const links = [
   { to: '/', label: <SplitText>Homepage</SplitText> },
-  { to: '/portfolio', label: <SplitText>Gallery</SplitText> },
+  { to: '/gallery', label: <SplitText>Gallery</SplitText> },
   { to: '/services', label: <SplitText>Services</SplitText> },
 ]
 
@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Logo */}
           <Link to="/">
             <img
-              src="/logos/creoaksLogo.png"
+              src="/logos/creoaksLogo.webp"
               alt="Creoaks Logo"
               loading="lazy"
               decoding="async"

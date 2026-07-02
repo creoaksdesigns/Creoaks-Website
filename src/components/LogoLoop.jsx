@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  "/logos/creoaksLogoBlack.png",
-  "/logos/creoaksLogoBlack2.png",
+  "/logos/creoaksLogoBlack.webp",
+  "/logos/creoaksLogoBlack2.webp",
 ];
 
 export default function LogoLoop() {

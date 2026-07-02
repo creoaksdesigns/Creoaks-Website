@@ -76,7 +76,7 @@ export default function Hero() {
               viewport={{ once: false, margin: "-100px" }}
             >
               <Link
-                to="/portfolio"
+                to="/gallery"
                 className="group flex items-center gap-4 rounded-full py-3 px-6 text-white hover:scale-105 transition-all duration-300"
               >
                 <span className="text-sm font-medium">GALLERY</span>

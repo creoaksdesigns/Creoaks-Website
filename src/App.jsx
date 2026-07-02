@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Services from './pages/Services'
-import Portfolio from './pages/Portfolio'
+import Gallery from './pages/Gallery'
 import { useEffect, useState } from "react"
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
@@ -31,7 +31,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/portfolio" element={<Gallery />} />
           </Routes>
         </main>
         </> 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 const approachSteps = [
   {
@@ -91,17 +92,29 @@ const Services = () => {
   const [openAccordion, setOpenAccordion] = useState(0);
 
   return (
-    
-    <Helmet>
-  <title>Branding, Printing & Web Design Services | Creoaks</title>
+    <>
+      <SEO
+        title="Services"
+        description="Explore Creoaks services for graphic design, digital and offset printing, large format printing, packaging, labeling, and branding consultation in Nigeria."
+        path="/services"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: 'Branding and Printing Services',
+          provider: {
+            '@type': 'Organization',
+            name: 'Creoaks Designs & Prints',
+            url: 'https://creoaks.com'
+          },
+          areaServed: 'NG',
+          availableChannel: {
+            '@type': 'ServiceChannel',
+            serviceUrl: 'https://wa.me/2349029967800'
+          }
+        }}
+      />
 
-  <meta
-    name="description"
-    content="Creoaks Designs & Prints offers professional branding, graphic design, printing, packaging, and creative solutions for businesses in Nigeria."
-  />
-</Helmet>
-    
-    <div className="w-full bg-white relative">
+      <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">
         <motion.div
@@ -144,7 +157,7 @@ const Services = () => {
               You want your brand to get noticed. Sometimes that means deploying marketing campaigns. Other times, it’s getting the right brand designs or print materials—fast and stress-free. At Creoaks, we guide you through a clear, proven process to get results:
             </p>
             <Link
-              to="/portfolio"
+              to="/gallery"
               className="inline-flex items-center gap-4 text-black text-sm font-bold tracking-widest uppercase hover:opacity-75 transition-opacity"
             >
               VIEW WORKS
@@ -305,7 +318,8 @@ const Services = () => {
           </a>
         </motion.div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

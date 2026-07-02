@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const links = [
   { to: '/', label: 'Homepage' },
-  { to: '/portfolio', label: 'Gallery' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/services', label: 'Services' },
 ]
 
@@ -60,7 +60,7 @@ useEffect(() => {
   return (
     <header className="bg-black sticky top-0 z-50 py-2">
       <div className="container-max flex items-center justify-between py-4">
-        <img src="/logos/creoaksLogo.png" alt="creoaksLogo" decoding="async" className="h-8 md:h-10 w-auto" />
+        <img src="/logos/creoaksLogo.webp" alt="creoaksLogo" decoding="async" className="h-8 md:h-10 w-auto" />
 
         <button
           onClick={() => setIsOpen((open) => !open)}

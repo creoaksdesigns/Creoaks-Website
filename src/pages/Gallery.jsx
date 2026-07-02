@@ -3,21 +3,25 @@ import ProtectedImage from "../components/ProtectedImage";
 import SplitText from "../components/SplitText";
 import portfolioItems from "../portfolioData";
 import ProjectSection from "../components/portfolio/ProjectSection";
+import SEO from '../components/SEO';
 
-const Portfolio = () => {
+const Gallery = () => {
 
   return (
-    
-    <Helmet>
-  <title>Our Portfolio | Creoaks Designs & Prints</title>
+    <>
+      <SEO
+        title="Gallery"
+        description="Browse Creoaks gallery projects featuring branding, graphic design, print campaigns, event visuals, packaging, and creative execution for Nigerian brands."
+        path="/gallery"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Creoaks Gallery',
+          url: 'https://creoaks.com/gallery'
+        }}
+      />
 
-  <meta
-    name="description"
-    content="Explore our portfolio of creative branding, graphic design, printing, and visual identity projects for businesses and brands in Nigeria."
-  />
-</Helmet>
-    
-    <div className="w-full bg-white relative">
+      <div className="w-full bg-white relative">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-auto bg-black text-white pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-12 lg:px-20 overflow-hidden text-center md:text-left">
         <motion.div
@@ -31,7 +35,7 @@ const Portfolio = () => {
             Designing a Better <br /> World Today
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-6 mt-12">
-            <a href="#portfolio" className="flex items-center gap-4 rounded-full py-3 px-6 bg-primary text-black hover:scale-105 transition-all duration-300">
+            <a href="#gallery" className="flex items-center gap-4 rounded-full py-3 px-6 bg-primary text-black hover:scale-105 transition-all duration-300">
               <span className="text-sm font-medium">OUR DESIGNS</span>
               <div className="bg-black p-3 rounded-full flex items-center justify-center">
                 <i className="fa-solid fa-arrow-down text-primary"></i>
@@ -41,7 +45,7 @@ const Portfolio = () => {
         </motion.div>
       </section>
 
-      {/* ================= PORTFOLIO GRID ================= */}
+      {/* ================= GALLERY GRID ================= */}
       <div className="max-w-7xl mx-auto relative z-10 space-y-32">
   {portfolioItems.map((project, index) => (
     <ProjectSection
@@ -80,8 +84,9 @@ const Portfolio = () => {
         </motion.div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 };
 
-export default Portfolio;
+export default Gallery;
