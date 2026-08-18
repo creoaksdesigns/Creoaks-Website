@@ -5,9 +5,9 @@ import { useEffect, useState } from "react"
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
 
-const Home = lazy(() => import('./pages/Home'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 const Services = lazy(() => import('./pages/Services'));
 
