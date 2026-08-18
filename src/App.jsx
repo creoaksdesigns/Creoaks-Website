@@ -1,13 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GAListener from './GAListener';
-import Home from './pages/Home'
-import Services from './pages/Services'
-import Gallery from './pages/Gallery'
+import { Suspense, lazy } from 'react';
 import { useEffect, useState } from "react"
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop';
+
+const Home = lazy(() => import('./pages/Home'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const Services = lazy(() => import('./pages/Services'));
+
+function PageLoading() {
+  return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading…</div>;
+}
 
 function App() {
   const [loading, setloading] = useState(true);
@@ -30,12 +36,14 @@ function App() {
         {loading && <Loader onFinish={() => setloading(false)} />}
         {!loading && <>
         <main className="w-full px-0 py-0">
+          <Suspense fallback={<PageLoading />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/portfolio" element={<Gallery />} />
           </Routes>
+          </Suspense>
         </main>
         </> 
         }
