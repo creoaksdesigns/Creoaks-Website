@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import GAListener from './GAListener';
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Gallery from './pages/Gallery'
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <GAListener />
     <ScrollToTop />
       <div className="no-select min-h-screen bg-black">
         <Navbar />
