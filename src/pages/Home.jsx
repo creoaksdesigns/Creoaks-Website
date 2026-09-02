@@ -309,7 +309,7 @@ const Home = () => {
               <div className="overflow-hidden rounded-2xl">
 
                 <motion.img
-                  src="/images/cdir.webp"
+                  src="/images/team/director.webp"
                   alt="Creoaks Creative Director"
                   loading="lazy"
                   decoding="async"

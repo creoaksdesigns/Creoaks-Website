@@ -32,6 +32,7 @@ const links = [
   { to: '/', label: <SplitText>Homepage</SplitText> },
   { to: '/gallery', label: <SplitText>Gallery</SplitText> },
   { to: '/services', label: <SplitText>Services</SplitText> },
+  { to: '/team', label: <SplitText>Our Team</SplitText> },
 ]
 
 const Footer = () => {

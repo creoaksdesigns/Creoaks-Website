@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 const Gallery = lazy(() => import('./pages/Gallery'));
 const Services = lazy(() => import('./pages/Services'));
+const Team = lazy(() => import('./pages/Team'));
 
 function PageLoading() {
   return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading…</div>;
@@ -41,7 +42,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/portfolio" element={<Gallery />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
           </Suspense>
         </main>
