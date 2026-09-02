@@ -97,7 +97,19 @@ function Member({ member, priority }) {
   const activeSocials = SOCIAL_PLATFORMS.filter((p) => hasLink(member[p.key]));
 
   return (
-    <li className="ct-member" itemScope itemType="https://schema.org/Person">
+    <>
+      <SEO
+        title="Team"
+        description="Meet the team behind Creoaks Designs & Prints, delivering branding, packaging and print for businesses across Nigeria."
+        path="/team"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Creoaks Team',
+          url: 'https://creoaks.com/team'
+        }}
+      />
+  <li className="ct-member" itemScope itemType="https://schema.org/Person">
       <Avatar member={member} priority={priority} />
       <div className="ct-member-info">
         <h2 itemProp="name">{member.name}</h2>
@@ -123,6 +135,7 @@ function Member({ member, priority }) {
         )}
       </div>
     </li>
+    </>
   );
 }
 
