@@ -4,6 +4,14 @@ import SEO from "../components/SEO";
 const SITE_URL = "https://www.creoaks.com";
 const PAGE_URL = `${SITE_URL}/team`;
 
+// Replace `photo` with a real hosted image for each teammate
+// (e.g. "/images/team/tega-okoro.jpg"). The URLs below are
+// placeholder illustrated avatars, not photos of real people,
+// standing in until real headshots are supplied.
+//
+// SOCIAL LINKS: each member can have `x`, `instagram`, and/or `tiktok`.
+// Leave a field out entirely (or set it to "#") for "no link yet" —
+// the icon for that platform simply won't render for that person.
 const TEAM = [
   {
     slug: "kazeem-sanni",
@@ -66,12 +74,17 @@ const TEAM = [
   },
 ];
 
+// The platforms we support, in the order icons should appear.
+// `iconClass` follows the same Font Awesome class pattern as the
+// rest of the site (e.g. "fa-solid fa-arrow-right" in Home.jsx) —
+// these are the fa-brands equivalents.
 const SOCIAL_PLATFORMS = [
   { key: "x", label: "X", iconClass: "fa-brands fa-x-twitter" },
   { key: "instagram", label: "Instagram", iconClass: "fa-brands fa-instagram" },
   { key: "tiktok", label: "TikTok", iconClass: "fa-brands fa-tiktok" },
 ];
 
+// A link counts as "real" if it's present and isn't a placeholder "#".
 function hasLink(value) {
   return Boolean(value) && value !== "#";
 }
@@ -97,19 +110,10 @@ function Member({ member, priority }) {
   const activeSocials = SOCIAL_PLATFORMS.filter((p) => hasLink(member[p.key]));
 
   return (
-    <>
-      <SEO
-        title="Team"
-        description="Meet the team behind Creoaks Designs & Prints, delivering branding, packaging and print for businesses across Nigeria."
-        path="/team"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'CollectionPage',
-          name: 'Creoaks Team',
-          url: 'https://creoaks.com/team'
-        }}
-      />
-  <li className="ct-member" itemScope itemType="https://schema.org/Person">
+    // itemScope/itemProp add lightweight inline microdata as a second,
+    // redundant signal alongside the JSON-LD block below — search
+    // engines primarily read the JSON-LD, this just reinforces it.
+    <li className="ct-member" itemScope itemType="https://schema.org/Person">
       <Avatar member={member} priority={priority} />
       <div className="ct-member-info">
         <h2 itemProp="name">{member.name}</h2>
@@ -135,7 +139,6 @@ function Member({ member, priority }) {
         )}
       </div>
     </li>
-    </>
   );
 }
 
@@ -143,6 +146,7 @@ export default function TeamPage() {
   const pageDescription =
     "Meet the designers, strategists and production team behind Creoaks Designs & Prints, delivering branding, packaging and print for businesses across Nigeria.";
 
+  // Organization + employee structured data for rich results.
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -315,7 +319,7 @@ export default function TeamPage() {
           .ct-wrap{ padding:0 20px; }
           .ct-header{ padding:64px 0 48px; }
           .ct-header h1{ max-width:100%; }
-          .ct-member{ grid-template-columns:1fr; gap:18px; }
+          .ct-member{ grid-template-columns:96px 1fr; gap:16px; }
           .ct-avatar{ width:96px; height:96px; }
           .ct-bio{ max-width:100%; }
         }
@@ -359,3 +363,81 @@ export default function TeamPage() {
   );
 }
 
+/*
+  SEO SETUP
+  ---------
+  This page now hands title/description/canonical/OG/Twitter/JSON-LD
+  off to the shared <SEO /> component (../components/SEO), the same
+  one used on Home.jsx:
+
+    <SEO
+      title="Our Team"
+      description={pageDescription}
+      path="/team"
+      structuredData={structuredData}
+    />
+
+  `title` is the short page name — same pattern as Home.jsx's
+  title="Home" — so however <SEO /> builds the full <title> tag
+  (e.g. appending "| Creoaks Designs & Prints") happens consistently
+  across every page rather than being hand-rolled here. `path` is
+  passed as "/team" rather than a full PAGE_URL — matching Home.jsx's
+  path="/" — on the assumption <SEO /> builds the canonical/OG URL
+  from SITE_URL + path internally; if it instead expects a full URL,
+  swap in PAGE_URL.
+
+  ICON SETUP
+  ----------
+  Social icons switched from inline SVG to Font Awesome classes, the
+  same pattern as the arrow icons elsewhere on the site
+  (<i className="fa-solid fa-arrow-right">). Whatever Font Awesome
+  kit/CDN link Home.jsx's arrow icons rely on needs to include the
+  Brands style for these to render:
+    - fa-brands fa-x-twitter
+    - fa-brands fa-instagram
+    - fa-brands fa-tiktok
+  If the project is on the Free tier (no fa-brands kit loaded), add
+  the Brands stylesheet/kit alongside whatever is already loading
+  fa-solid.
+
+  CONTENT TO REPLACE
+  -------------------
+  1. TEAM array: swap `photo` for real hosted images (ideally imported
+     local assets or files in /public, sized ~264x264px min for retina,
+     compressed to WebP/AVIF where possible), and real x/instagram/
+     tiktok URLs. Any member missing a given field (or set to "#")
+     just won't show that icon — no placeholder links needed.
+  2. SITE_URL / PAGE_URL constants: point these at your real domain.
+  3. pageDescription: adjust copy as needed, keep it under ~155
+     characters for search snippets.
+
+  SOCIAL ICONS SHOWN
+  -------------------
+  - Platforms: X, Instagram, TikTok (see SOCIAL_PLATFORMS).
+  - A member's icon row only renders icons for fields that are present
+    and not "#" — so Kazeem, Khadijah, Farida, Ola, Muhammad, Jameel
+    and Abdulrahman currently show no icons at all (no links on file
+    yet), while Ejiro shows X + Instagram (TikTok field currently
+    duplicates the X link as a placeholder — swap in a real TikTok URL
+    or delete that line).
+  - To add a 4th platform, add an entry to SOCIAL_PLATFORMS with its
+    fa-brands class — no other changes needed.
+
+  OTHER SEO CHOICES MADE HERE
+  ----------------------------
+  - Single <h1> for the page, <h2> for each teammate's name (correct
+    heading hierarchy for crawlers and screen readers), plus a visually
+    hidden <h2> section label so the roster is a labelled landmark.
+  - Descriptive, unique alt text per photo (name + role + company)
+    rather than generic "team photo" alt text.
+  - width/height set on every <img> to reserve layout space and avoid
+    cumulative layout shift (a Core Web Vitals ranking factor).
+  - First two images load eager/high-priority (likely above the fold);
+    the rest lazy-load.
+  - Semantic <header>/<main>/<section>/<ul><li> structure instead of
+    generic <div> soup.
+  - JSON-LD Organization + Person structured data, passed to <SEO />
+    so search engines can understand and potentially surface team
+    members directly.
+  - rel="noopener noreferrer" on external social links.
+*/
