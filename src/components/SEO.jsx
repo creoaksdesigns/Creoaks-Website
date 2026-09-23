@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 const defaultTitle = 'Creoaks Designs & Prints | Branding, Printing & Web Design in Abuja, Nigeria';
 const defaultDescription =
   'Creoaks delivers branding, graphic design, printing, packaging, and creative solutions for businesses and events in Nigeria.';
-const defaultImage = 'https://creoaks.com/images/office.webp';
-const defaultUrl = 'https://creoaks.com';
+const defaultImage = 'https://www.creoaks.com/images/office.webp';
+const defaultUrl = 'https://www.creoaks.com';
 
 const SEO = ({
   title,
@@ -16,7 +16,8 @@ const SEO = ({
   structuredData,
 }) => {
   const pageTitle = title ? `${title} | Creoaks` : defaultTitle;
-  const canonicalUrl = `${defaultUrl}${path === '/' ? '' : path}`;
+  const cleanPath = path === '/' ? '/' : `/${path.replace(/^\/+|\/+$/g, '')}`;
+  const canonicalUrl = `${defaultUrl}${cleanPath === '/' ? '/' : cleanPath}`;
 
   return (
     <Helmet>

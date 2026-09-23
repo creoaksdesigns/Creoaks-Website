@@ -104,7 +104,7 @@ const Services = () => {
           provider: {
             '@type': 'Organization',
             name: 'Creoaks Designs & Prints',
-            url: 'https://creoaks.com'
+            url: 'https://www.creoaks.com'
           },
           areaServed: 'NG',
           availableChannel: {

@@ -37,8 +37,8 @@ const Home = () => {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Creoaks Designs & Prints',
-          url: 'https://creoaks.com',
-          logo: 'https://creoaks.com/logos/creoaksLogo.webp',
+          url: 'https://www.creoaks.com',
+          logo: 'https://www.creoaks.com/logos/creoaksLogo.webp',
           sameAs: ['https://www.instagram.com/creoaks/', 'https://www.tiktok.com/@creoaks0', 'https://x.com/Cre0aks'],
           contactPoint: {
             '@type': 'ContactPoint',

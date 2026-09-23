@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://creoaks.com/sitemap.xml
+Sitemap: https://www.creoaks.com/sitemap.xml

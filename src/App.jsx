@@ -17,7 +17,21 @@ function PageLoading() {
 }
 
 function App() {
-  const [loading, setloading] = useState(true);
+  const [loading, setloading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const isRoot = window.location.pathname === '/' || window.location.pathname === '';
+      const hasSeenLoader = sessionStorage.getItem('hasSeenIntro');
+      return isRoot && !hasSeenLoader;
+    }
+    return false;
+  });
+
+  const handleLoaderFinish = () => {
+    setloading(false);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('hasSeenIntro', 'true');
+    }
+  };
 
   useEffect(() => {
     const handleContextMenu = (e) => {
@@ -33,9 +47,7 @@ function App() {
     <ScrollToTop />
       <div className="no-select min-h-screen bg-black">
         <Navbar />
-        <>
-        {loading && <Loader onFinish={() => setloading(false)} />}
-        {!loading && <>
+        {loading && <Loader onFinish={handleLoaderFinish} />}
         <main className="w-full px-0 py-0">
           <Suspense fallback={<PageLoading />}>
           <Routes>
@@ -46,9 +58,6 @@ function App() {
           </Routes>
           </Suspense>
         </main>
-        </> 
-        }
-        </>
         <Footer />
       </div>
     </BrowserRouter>

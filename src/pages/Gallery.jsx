@@ -17,7 +17,7 @@ const Gallery = () => {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
           name: 'Creoaks Gallery',
-          url: 'https://creoaks.com/gallery'
+          url: 'https://www.creoaks.com/gallery'
         }}
       />
 
