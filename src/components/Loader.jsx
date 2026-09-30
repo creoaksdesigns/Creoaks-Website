@@ -7,6 +7,15 @@ export default function Loader({ onFinish }) {
   const [stage, setStage] = useState(0);
 
   useEffect(() => {
+    if (typeof navigator !== 'undefined') {
+      const ua = navigator.userAgent || '';
+      const isBot = navigator.webdriver || /bot|googlebot|crawler|spider|robot|crawling|lighthouse|headlesschrome|mediapartners-google|bingbot|yandex|duckduckbot|baiduspider|slurp|applebot/i.test(ua);
+      if (isBot) {
+        onFinish();
+        return;
+      }
+    }
+
     const timeline = [
       setTimeout(() => setStage(1), 2000), // text exit
       setTimeout(() => setStage(2), 3000), // bar animation

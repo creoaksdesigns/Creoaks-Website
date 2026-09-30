@@ -109,6 +109,11 @@ function generateHtml(route) {
     `<meta name="description" content="${route.description}" />`
   );
 
+  // Cleanly replace canonical tag if present in the template, otherwise remove it
+  if (/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/i.test(html)) {
+    html = html.replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/i, '');
+  }
+
   // SEO tags to inject into <head>
   const seoTags = `
     <!-- Canonical & Open Graph metadata injected for static crawling -->

@@ -16,9 +16,17 @@ function PageLoading() {
   return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading…</div>;
 }
 
+const isBotOrCrawler = () => {
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') return true;
+  if (navigator.webdriver) return true;
+  const ua = navigator.userAgent || '';
+  return /bot|googlebot|crawler|spider|robot|crawling|lighthouse|headlesschrome|mediapartners-google|bingbot|yandex|duckduckbot|baiduspider|slurp|applebot/i.test(ua);
+};
+
 function App() {
   const [loading, setloading] = useState(() => {
     if (typeof window !== 'undefined') {
+      if (isBotOrCrawler()) return false;
       const isRoot = window.location.pathname === '/' || window.location.pathname === '';
       const hasSeenLoader = sessionStorage.getItem('hasSeenIntro');
       return isRoot && !hasSeenLoader;

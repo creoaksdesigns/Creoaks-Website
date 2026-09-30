@@ -1,6 +1,29 @@
 {
   "trailingSlash": false,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "creoaks.com"
+        }
+      ],
+      "destination": "https://www.creoaks.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-2",
+      "destination": "/gallery",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!sitemap\\.xml|robots\\.txt).*)",
